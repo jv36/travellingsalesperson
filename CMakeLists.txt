@@ -8,4 +8,9 @@ include_directories(src)
 add_executable(travellingsalesperson
         src/Menu.cpp
         src/Menu.h
-        main.cpp)
+        main.cpp
+        src/Graph.h
+        src/Graph.cpp
+        src/Manager.h
+        src/Manager.cpp
+)
