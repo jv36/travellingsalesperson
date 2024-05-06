@@ -186,6 +186,13 @@ std::string Vertex::getLatitude() const{
     return this->latitude;
 }
 
+double Vertex::getDist() const {
+    return this->dist;
+}
+void Vertex::setDist(double dist) {
+    this->dist = dist;
+}
+
 /********************** Edge  ****************************/
 
 /**

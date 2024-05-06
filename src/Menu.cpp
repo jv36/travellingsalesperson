@@ -215,10 +215,11 @@ int Menu::mainMenu() {
     std::cout << "| option 1, please input 1 in                             |\n";
     std::cout << "| the terminal.                                           |\n";
     std::cout << "|                                                         |\n";
-    std::cout << "| 3 - Change dataset                                      |\n";
+    std::cout << "| 4 - Change dataset                                      |\n";
     std::cout << "| ==================== Main Menu ======================== |\n";
     std::cout << "| 1 - Number of elements                                  |\n";
-    std::cout << "| 2 - Exit                                                |\n";
+    std::cout << "| 2 - Backtrack bounding                                  |\n";
+    std::cout << "| 3 - Exit                                                |\n";
     std::cout << "| ======================================================= |\n";
     std::cout << "| Please enter your choice:                               |\n";
     std::cout << "+---------------------------------------------------------+\n";
@@ -230,19 +231,31 @@ int Menu::mainMenu() {
         throw std::invalid_argument("Error 001: Your input was not an integer. Please restart the program and try again.");
     }
 
-    while ((n < 1 || n > 3 ) && !(std::cin.fail())) {
+    while ((n < 1 || n > 4 ) && !(std::cin.fail())) {
         std::cout << "Choose a valid option." << std::endl;
         std::cin >> n;
         std::cout << std::endl;
     }
 
+    std::vector<std::pair<std::vector<int>,double>> paths;
     switch(n) {
         case 1:
             manager.counter(graph);
             break;
         case 2:
-            exit(0);
+            paths = manager.backtrackBounding();
+            std::cout << paths.size();
+            for (auto path : paths) {
+                std::cout << "Path: ";
+                for (auto vertex : path.first) {
+                    std::cout << vertex << " ";
+                }
+                std::cout << "Cost: " << path.second << std::endl;
+            }
+            break;
         case 3:
+            exit(0);
+        case 4:
             graph = Graph();
             main();
             break;

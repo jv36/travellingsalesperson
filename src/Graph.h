@@ -8,6 +8,7 @@
 
 #include <vector>
 #include <string>
+#include "mutpriorq.h"
 
 
 class Edge;
@@ -23,10 +24,12 @@ public:
     std::vector<Edge*> getAdj() const;
     bool isVisited() const;
     Edge* getPath() const;
+    double getDist() const;
     std::vector<Edge*> getIncoming() const;
 
     void setVisited(bool visited);
     void setPath(Edge *path);
+    void setDist(double dist);
     Edge* addEdge(Vertex *dest, double w);
     bool removeEdge(int in);
     void removeOutgoingEdges();
@@ -34,6 +37,7 @@ public:
     int getID() const;
     std::string getLongitude() const;
     std::string getLatitude() const;
+    friend class MutablePriorityQueue<Vertex>;
 
 protected:
     int id;
