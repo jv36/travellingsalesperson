@@ -193,6 +193,14 @@ void Vertex::setDist(double dist) {
     this->dist = dist;
 }
 
+int Vertex::getTreeDeg() const {
+    return this->treeDeg;
+}
+
+void Vertex::setTreeDeg(int treeDeg) {
+    this->treeDeg = treeDeg;
+}
+
 /********************** Edge  ****************************/
 
 /**

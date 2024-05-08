@@ -192,7 +192,38 @@ std::vector<std::pair<std::vector<int>,double>> Manager::backtrackBounding() {
     return minCostPaths;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 // Triangular approximation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 std::pair<std::vector<int>,double> Manager::preOrderMST() {
     std::vector<int> preorder;
@@ -241,32 +272,42 @@ std::pair<std::vector<int>,double> Manager::TSPHeuristicAproximation() {
 }
 
 std::set<Edge *> Manager::Prim() {
+    std::set<Edge*> mst = {};
+
     if (graph.getVertexSet().empty()) {
-        return {};
+        return mst;
     }
-    std::set<Edge*> mst;
-    for(auto vertex : graph.getVertexSet()) {
-        vertex->setDist(std::numeric_limits<double>::max());
-        vertex->setPath(nullptr);
-        vertex->setVisited(false);
+
+    for (auto vert : graph.getVertexSet()) {
+        // set all vertices to infinite distance
+        vert->setDist(std::numeric_limits<double>::infinity());
+        vert->setVisited(false);
+        vert->setPath(nullptr);
     }
-    Graph a=graph;
+
     // start with an arbitrary vertex
-    Vertex* root = graph.getVertexSet()[0];
-    root->setDist(0);
+    // prim and kruskal algorithms imply that the graph is connected
+    // and that you start in the beginning of the graph
+    auto first = graph.getVertexSet()[0];
+    first->setDist(0);
+
+    // Friend class (using practical class version)
+    // We need to decrease keys so this is useful
     MutablePriorityQueue<Vertex> q;
-    q.insert(root);
-    while( ! q.empty() ) {
+    q.insert(first);
+    while (!q.empty()) {
+        // pick closest unprocessed node
         auto v = q.extractMin();
         v->setVisited(true);
-        for(auto &e : v->getAdj()) {
-            Vertex* w = e->getDest();
+
+        for (auto &e : v->getAdj()) {
+            auto w = e->getDest();
             if (!w->isVisited()) {
                 auto oldDist = w->getDist();
-                if(e->getDist() < oldDist) {
-                    w->setDist(e->getDist());
+                if(e->getDistance() < oldDist) {
+                    w->setDist(e->getDistance());
                     w->setPath(e);
-                    if (oldDist == std::numeric_limits<double>::max()) {
+                    if (oldDist == std::numeric_limits<double>::infinity()) {
                         q.insert(w);
                     }
                     else {
@@ -275,10 +316,12 @@ std::set<Edge *> Manager::Prim() {
                 }
             }
         }
+        // form the path
         if (v->getPath() != nullptr){
+            int increaseDeg = v->getPath()->getDest()->getTreeDeg()+1;
             mst.insert(v->getPath());
-            v->getPath()->getDest()->incrementmstdegree();
-            v->getPath()->getOrig()->incrementmstdegree();
+            v->getPath()->getDest()->setTreeDeg(increaseDeg);
+            v->getPath()->getOrig()->setTreeDeg(increaseDeg);
         }
 
 
@@ -289,7 +332,7 @@ std::set<Edge *> Manager::Prim() {
 
 
 
-double Manager::getDist(int a,int b){
+double Manager::getDistanceCoordHaversine(int a,int b){
     for (auto edge:graph.findVertex(a)->getAdj()){
         if (edge->getDest()->getID()==b) return edge->getDistance();
     }

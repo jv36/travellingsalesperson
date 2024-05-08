@@ -28,7 +28,7 @@ private:
 
     double haversineDistance(double lat1, double lon1, double lat2, double lon2);
 
-    double getDist(int a, int b);
+    double getDistanceCoordHaversine(int a, int b);
 
     double degreesToRadians(double degrees);
 

@@ -37,6 +37,8 @@ public:
     int getID() const;
     std::string getLongitude() const;
     std::string getLatitude() const;
+    int getTreeDeg() const;
+    void setTreeDeg(int treeDeg);
     friend class MutablePriorityQueue<Vertex>;
 
 protected:
@@ -44,6 +46,7 @@ protected:
     std::string longitude;
     std::string latitude;
     std::vector<Edge*> adj;  // outgoing edges
+    int treeDeg = 0; // used by Prim
 
     // auxiliary fields
     bool visited = false; // used by DFS, BFS, Prim ...
