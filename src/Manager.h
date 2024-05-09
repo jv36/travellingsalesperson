@@ -21,20 +21,23 @@ public:
     void backtracking(Graph &graph, std::vector<int> &path, std::vector<std::pair<std::vector<int>, double>> &paths,
                       double currCost, double minCost, int currVertex);
 
+    std::vector<Vertex*> prim(Graph graph);
+    void triangular(Graph& graph);
+    double getDistanceCoordHaversine(Graph& graph, Vertex* a, Vertex* b);
+
 private:
     Graph graph;
 
-    std::pair<std::vector<int>, double> preOrderMST();
+    double haversine(double lat1, double lon1, double lat2, double lon2);
 
-    double haversineDistance(double lat1, double lon1, double lat2, double lon2);
 
-    double getDistanceCoordHaversine(int a, int b);
 
-    double degreesToRadians(double degrees);
+    double convert_to_radians(double coord);
 
-    std::pair<std::vector<int>, double> TSPHeuristicAproximation();
 
-    std::set<Edge *> Prim();
+
+    // std::set<Edge *> prim();
+
 };
 
 

@@ -11,6 +11,7 @@
 #include <cmath>
 #include <limits>
 #include "Manager.h"
+#include <ctime>
 
 void Manager::createNodesRealWorld(const std::string &filename, Graph &graph) {
     std::ifstream file(filename);
@@ -31,7 +32,7 @@ void Manager::createNodesRealWorld(const std::string &filename, Graph &graph) {
 
         int idConv = std::stoi(id);
 
-        Vertex* vert = new Vertex(idConv, longitude, latitude);
+        Vertex* vert = new Vertex(idConv, std::stod(longitude), std::stod(latitude));
         graph.addVertex(vert);
     }
 }
@@ -84,13 +85,13 @@ void Manager::createToyGraphs(const std::string &filename, Graph &graph) {
 
         if (!graph.findVertex(originConv)) {
             // Toy graph vertex constructor -- different from real world
-            auto vert = new Vertex(originConv);
+            auto vert = new Vertex(originConv, 0.0, 0.0);
             graph.addVertex(vert);
         }
 
         if (!graph.findVertex(destinationConv)) {
             // Toy graph vertex constructor -- different from real world
-            auto vert = new Vertex(destinationConv);
+            auto vert = new Vertex(destinationConv, 0.0, 0.0);
             graph.addVertex(vert);
         }
 
@@ -206,76 +207,11 @@ std::vector<std::pair<std::vector<int>,double>> Manager::backtrackBounding() {
 
 // Triangular approximation
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-std::pair<std::vector<int>,double> Manager::preOrderMST() {
-    std::vector<int> preorder;
-    double cost=0;
-    int lastid;
-    std::stack<Vertex*> stack;
-    stack.push(graph.findVertex(0));
-    Graph debug = graph;
-    bool child;
-    while (!stack.empty()) {
-        Vertex* current = stack.top();
-        stack.pop();
-        preorder.push_back(current->getID());
-        lastid=current->getID();
-        child=true;
-        for (auto vertexPair : graph.getVertexSet() ) {
-            if (vertexPair->getID()!=0 && vertexPair->getID()!=lastid){
-                if (vertexPair->getPath()->getOrig()->getID()==current->getID()){
-                    cost+=getDist(vertexPair->getID(),current->getID());
-                    stack.push(vertexPair);
-                    child=false;
-                }
-            }
-        }
-        if (child && !stack.empty())  cost+=getDist(current->getID(),stack.top()->getID());;
-    }
-
-    preorder.push_back(0);
-    for (auto vertexPair :graph.getVertexSet()){
-        if (vertexPair->getID()==lastid){
-            cost+=getDist(0,vertexPair->getID() );
-
-        }
-    }
-
-    return std::make_pair(preorder,cost);
-}
-
-std::pair<std::vector<int>,double> Manager::TSPHeuristicAproximation() {
-
-    Prim();
-    std::pair<std::vector<int>,double> path = preOrderMST();
-
-
-    return path;
-}
-
-std::set<Edge *> Manager::Prim() {
-    std::set<Edge*> mst = {};
-
+std::vector<Vertex*> Manager::prim(Graph graph) {
+    std::vector<Vertex*> mst;
     if (graph.getVertexSet().empty()) {
-        return mst;
+        // return empty set
+        return graph.getVertexSet();
     }
 
     for (auto vert : graph.getVertexSet()) {
@@ -285,20 +221,20 @@ std::set<Edge *> Manager::Prim() {
         vert->setPath(nullptr);
     }
 
-    // start with an arbitrary vertex
-    // prim and kruskal algorithms imply that the graph is connected
-    // and that you start in the beginning of the graph
-    auto first = graph.getVertexSet()[0];
+    // first vert. as starting point
+    auto first = graph.getVertexSet().front();
     first->setDist(0);
 
     // Friend class (using practical class version)
     // We need to decrease keys so this is useful
     MutablePriorityQueue<Vertex> q;
     q.insert(first);
+
     while (!q.empty()) {
         // pick closest unprocessed node
         auto v = q.extractMin();
         v->setVisited(true);
+        mst.push_back(v);
 
         for (auto &e : v->getAdj()) {
             auto w = e->getDest();
@@ -316,46 +252,107 @@ std::set<Edge *> Manager::Prim() {
                 }
             }
         }
-        // form the path
-        if (v->getPath() != nullptr){
-            int increaseDeg = v->getPath()->getDest()->getTreeDeg()+1;
-            mst.insert(v->getPath());
-            v->getPath()->getDest()->setTreeDeg(increaseDeg);
-            v->getPath()->getOrig()->setTreeDeg(increaseDeg);
-        }
-
-
     }
 
     return mst;
+
 }
 
+void Manager::triangular(Graph& graph) {
+    clock_t start = clock();
+    std::vector<Vertex*> mst = prim(graph);
 
+    double totalDistance = 0;
 
-double Manager::getDistanceCoordHaversine(int a,int b){
-    for (auto edge:graph.findVertex(a)->getAdj()){
-        if (edge->getDest()->getID()==b) return edge->getDistance();
+    Vertex* previousVertex = nullptr;
+    Vertex* lastVertex = nullptr;
+    std::vector<int> path;
+    bool isConnected;
+
+    for (auto v : mst) {
+        v->setVisited(false);
     }
 
-    return haversineDistance(std::stod(graph.findVertex(a)->getLatitude()),std::stod(graph.findVertex(a)->getLongitude()),std::stod(graph.findVertex(b)->getLatitude()),std::stod(graph.findVertex(b)->getLongitude()));
+    for (auto vertex : mst) {
+        if (previousVertex != nullptr) {
+            isConnected = false;
+            for (auto e : previousVertex->getAdj()) {
+                if (e->getDest() == vertex) {
+                    if (!vertex->isVisited()) {
+                        totalDistance += e->getDistance();
+                        path.push_back(vertex->getID());
+                        vertex->setVisited(true);
+                        previousVertex = vertex;
+                    }
+                    isConnected = true;
+                    break;
+                }
+            }
+
+            if (!isConnected) {
+                vertex->setVisited(true);
+                totalDistance += getDistanceCoordHaversine(graph, previousVertex, vertex);
+                path.push_back(vertex->getID());
+                previousVertex = vertex;
+            }
+        }
+        else {
+            previousVertex = vertex;
+            path.push_back(vertex->getID());
+            lastVertex = vertex;
+        }
+    }
+
+    path.push_back(0);
+
+    for (auto edge: previousVertex->getAdj()) {
+        if (edge->getDest() == lastVertex) {
+            totalDistance += edge->getDistance();
+        }
+    }
+
+    if (previousVertex != nullptr) {
+        totalDistance += getDistanceCoordHaversine(graph, graph.findVertex(0), lastVertex);
+    }
+
+    std::cout << "Path: ";
+    for (auto v : path) {
+        std::cout << v << " ";
+    }
+    std::cout << std::endl;
+
+    std::cout << "Total distance: " << totalDistance << std::endl;
+    std::cout << "Execution time (milliseconds): " << (clock() - start) << "ms" << std::endl;
+    std::cout << "Execution time (seconds): " << (double)(clock() - start) / CLOCKS_PER_SEC << "s" << std::endl;
+}
+
+double Manager::getDistanceCoordHaversine(Graph& graph, Vertex* a, Vertex* b){
+
+    if (a->getLatitude() == 0 && a->getLongitude() == 0 && b->getLatitude() == 0 && b->getLongitude() == 0) {
+        std::cout << ">> Executing on a Toy graph <<" << std::endl;
+        return 0.0;
+    }
+
+    return haversine(a->getLatitude(),a->getLongitude(),b->getLatitude(),b->getLongitude());
 
 }
 
-constexpr double kEarthRadiusKm = 6371.0;
 
-double Manager::degreesToRadians(double degrees) {
-    return degrees * M_PI / 180.0;
+
+double Manager::convert_to_radians(double coord) {
+    return coord * M_PI / 180.0;
 }
 
-double Manager::haversineDistance(double lat1, double lon1, double lat2, double lon2) {
-    double dLat = degreesToRadians(lat2 - lat1);
-    double dLon = degreesToRadians(lon2 - lon1);
+double Manager::haversine(double lat1, double lon1, double lat2, double lon2) {
+    double delta_lat = convert_to_radians(lat2 - lat1);
+    double delta_lon = convert_to_radians(lon2 - lon1);
 
-    double a = std::sin(dLat / 2) * std::sin(dLat / 2) +
-               std::cos(degreesToRadians(lat1)) * std::cos(degreesToRadians(lat2)) *
-               std::sin(dLon / 2) * std::sin(dLon / 2);
+    double converted_lat1 = convert_to_radians(lat1);
+    double converted_lat2 = convert_to_radians(lat2);
 
-    double c = 2 * std::atan2(std::sqrt(a), std::sqrt(1 - a));
-
-    return kEarthRadiusKm * c;
+    // sin^2(delta_lat/2) + cos(rad_lat1) * cos(rad_lat2) * sin^2(delta_lon/2)
+    double aux = std::pow(std::sin(delta_lat / 2), 2) + std::cos(converted_lat1) * std::cos(converted_lat2) * std::pow(std::sin(delta_lon/ 2), 2);
+    double c = 2.0 * std::atan2(std::sqrt(aux), std::sqrt(1 - aux));
+    const double earthRadius = 6371.0;
+    return earthRadius * c;
 }

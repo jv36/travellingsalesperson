@@ -140,24 +140,17 @@ Edge *Vertex::addEdge(Vertex *dest, double w) {
 }
 
 /**
- * @brief Construtor da classe Vertex. Utilizado para vértices do tipo RealWorld.
+ * @brief Construtor da classe Vertex.
  * @param id: id
  * @param longitude: longitude
  * @param latitude: latitude
  */
-Vertex::Vertex(int id, std::string longitude, std::string latitude) {
+Vertex::Vertex(int id, double longitude, double latitude) {
     this->id = id;
     this->longitude = longitude;
     this->latitude = latitude;
 }
 
-/**
- * @brief Construtor da classe Vertex. Utilizado para vértices do tipo ToyGraph.
- * @param id: id
- */
-Vertex::Vertex(int id) {
-    this->id = id;
-}
 
 /**
  * @brief Obtém o código (ID) de um vértice.
@@ -173,7 +166,7 @@ int Vertex::getID() const {
  * @details Complexidade: O(1)
  * @return Retorna a longitude de um vértice.
  */
-std::string Vertex::getLongitude() const{
+double Vertex::getLongitude() const{
     return this->longitude;
 }
 
@@ -182,7 +175,7 @@ std::string Vertex::getLongitude() const{
  * @details Complexidade: O(1)
  * @return Retorna a latitude de um vértice.
  */
-std::string Vertex::getLatitude() const{
+double Vertex::getLatitude() const{
     return this->latitude;
 }
 

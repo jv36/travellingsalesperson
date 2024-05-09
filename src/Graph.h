@@ -16,8 +16,7 @@ class Edge;
 
 class Vertex {
 public:
-    Vertex(int id, std::string longitude, std::string latitude); // Realworld vertex
-    Vertex(int id); // Toy graph vertex
+    Vertex(int id, double longitude, double latitude); // Realworld vertex
 
     bool operator<(Vertex & vertex) const; // // required by MutablePriorityQueue
 
@@ -35,16 +34,16 @@ public:
     void removeOutgoingEdges();
 
     int getID() const;
-    std::string getLongitude() const;
-    std::string getLatitude() const;
+    double getLongitude() const;
+    double getLatitude() const;
     int getTreeDeg() const;
     void setTreeDeg(int treeDeg);
     friend class MutablePriorityQueue<Vertex>;
 
 protected:
     int id;
-    std::string longitude;
-    std::string latitude;
+    double longitude;
+    double latitude;
     std::vector<Edge*> adj;  // outgoing edges
     int treeDeg = 0; // used by Prim
 

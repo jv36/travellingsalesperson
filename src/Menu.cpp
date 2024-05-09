@@ -254,8 +254,11 @@ int Menu::mainMenu() {
             }
             break;
         case 3:
-            exit(0);
+            manager.triangular(graph);
+            break;
         case 4:
+            exit(0);
+        case 5:
             graph = Graph();
             main();
             break;
