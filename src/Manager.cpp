@@ -161,9 +161,7 @@ void Manager::backtracking(Graph& graph, std::vector<int>& path, std::vector<std
 }
 
 
-std::vector<std::pair<std::vector<int>,double>> Manager::backtrackBounding() {
-    Graph graph = Manager::graph;
-    std::cout << "so";
+std::vector<Vertex*> Manager::backtrackBounding(Graph& graph) {
     for (auto vert: graph.getVertexSet()) {
         vert->setVisited(false);
     }
@@ -174,7 +172,7 @@ std::vector<std::pair<std::vector<int>,double>> Manager::backtrackBounding() {
     path.push_back(0);
     graph.findVertex(0)->setVisited(true);
 
-    std::vector<std::pair<std::vector<int>, double>> paths;
+    std::vector<Vertex*> path;
     backtracking(graph, path, paths, currCost, minCost, 0);
     std::sort(paths.begin(), paths.end(),
               [](const std::pair<std::vector<int>, double> &a, const std::pair<std::vector<int>, double> &b) {

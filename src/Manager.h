@@ -17,7 +17,7 @@ public:
 
     void counter(Graph& graph);
 
-    std::vector<std::pair<std::vector<int>, double>> backtrackBounding();
+    std::vector<Vertex*> backtrackBounding(Graph& graph);
     void backtracking(Graph &graph, std::vector<int> &path, std::vector<std::pair<std::vector<int>, double>> &paths,
                       double currCost, double minCost, int currVertex);
 
