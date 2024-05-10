@@ -126,74 +126,56 @@ void Manager::counter(Graph& graph) {
 
 
 
-void Manager::backtracking(Graph& graph, std::vector<int>& path, std::vector<std::pair<std::vector<int>,double>>& paths, double currCost, double minCost, int currVertex) {
 
-    // número de cidades
-    int n = graph.getVertexSet().size();
 
-    if (path.size() == n) {
-        // se todas as cidades foram visitadas
-        // adicionar o custo do caminho de volta
-        for (auto edge : graph.findVertex(currVertex)->getAdj()) {
-            if (edge->getDest()->getID() == 0) {
-                currCost += edge->getDistance();
-                if (currCost < minCost) {
-                    minCost = currCost;
-                }
-                paths.emplace_back(path, currCost);
-                return;
-            }
+void Manager::backtracking(Graph& graph, std::vector<int>& path, std::vector<int>& min_path, double& minDistance, double &totalDistance, Vertex* currVertex) {
+    if (path.size() == graph.getVertexSet().size()) {
+        if (totalDistance < minDistance) {
+            min_path = path;
+            minDistance = totalDistance;
         }
-
+        return;
     }
-    std::cout << paths.size();
 
-    for (auto edge: graph.findVertex(currVertex)->getAdj()) {
+
+    for (auto edge : currVertex->getAdj()) {
         if (!edge->getDest()->isVisited()) {
-            // próximo vértice
+            if (totalDistance + edge->getDistance() >= minDistance) {
+                continue;
+            }
             path.push_back(edge->getDest()->getID());
             edge->getDest()->setVisited(true);
-            backtracking(graph, path, paths, currCost + edge->getDistance(), minCost, edge->getDest()->getID());
+            totalDistance += edge->getDistance();
+            backtracking(graph, path, min_path, minDistance, totalDistance, edge->getDest());
             path.pop_back();
             edge->getDest()->setVisited(false);
+            totalDistance -= edge->getDistance();
         }
     }
 }
 
+void Manager::backtrackBounding(Graph& graph) {
+    clock_t start = clock();
 
-std::vector<Vertex*> Manager::backtrackBounding(Graph& graph) {
-    for (auto vert: graph.getVertexSet()) {
-        vert->setVisited(false);
-    }
-
-    double currCost = 0;
-    double minCost = 999999999;
     std::vector<int> path;
-    path.push_back(0);
-    graph.findVertex(0)->setVisited(true);
+    std::vector<int> min_path;
+    double minDistance = std::numeric_limits<double>::infinity();
+    double totalDistance = 0;
+    Vertex* currVertex = graph.findVertex(0);
 
-    std::vector<Vertex*> path;
-    backtracking(graph, path, paths, currCost, minCost, 0);
-    std::sort(paths.begin(), paths.end(),
-              [](const std::pair<std::vector<int>, double> &a, const std::pair<std::vector<int>, double> &b) {
-                  return a.second < b.second;
-              });
+    backtracking(graph, path, min_path, minDistance, totalDistance, currVertex);
 
-    double min = paths.at(0).second;
-    std::vector<std::pair<std::vector<int>, double>> minCostPaths;
 
-    for (const auto &path: paths) {
-        if (path.second == min) {
-            minCostPaths.push_back(path);
-        }
+    std::cout << "Path: ";
+    for (auto v : min_path) {
+        std::cout << v << " ";
     }
+    std::cout << std::endl;
 
-    return minCostPaths;
+    std::cout << "Minimum distance: " << minDistance << std::endl;
+    std::cout << "Execution time (milliseconds): " << (clock() - start) << "ms" << std::endl;
+    std::cout << "Execution time (seconds): " << (double)(clock() - start) / CLOCKS_PER_SEC << "s" << std::endl;
 }
-
-
-
-
 
 
 

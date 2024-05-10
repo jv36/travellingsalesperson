@@ -243,15 +243,7 @@ int Menu::mainMenu() {
             manager.counter(graph);
             break;
         case 2:
-            paths = manager.backtrackBounding();
-            std::cout << paths.size();
-            for (auto path : paths) {
-                std::cout << "Path: ";
-                for (auto vertex : path.first) {
-                    std::cout << vertex << " ";
-                }
-                std::cout << "Cost: " << path.second << std::endl;
-            }
+            manager.backtrackBounding(graph);
             break;
         case 3:
             manager.triangular(graph);
