@@ -18,7 +18,7 @@ public:
     void counter(Graph& graph);
 
     void backtrackBounding(Graph& graph);
-    void backtracking(Graph& graph, std::vector<int>& path, std::vector<int>& min_path, double& minDistance, double &totalDistance, Vertex* currVertex);
+    void backtracking(Graph& graph, std::vector<int>& path, std::vector<int>& min_path, double& minDistance, double &totalDistance, Vertex* currVertex, int startVertex);
 
     std::vector<Vertex*> prim(Graph graph);
     void triangular(Graph& graph);

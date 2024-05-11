@@ -128,15 +128,14 @@ void Manager::counter(Graph& graph) {
 
 
 
-void Manager::backtracking(Graph& graph, std::vector<int>& path, std::vector<int>& min_path, double& minDistance, double &totalDistance, Vertex* currVertex) {
-    if (path.size() == graph.getVertexSet().size()) {
+void Manager::backtracking(Graph& graph, std::vector<int>& path, std::vector<int>& min_path, double& minDistance, double &totalDistance, Vertex* currVertex, int startVertex) {
+    if (path.size() == graph.getVertexSet().size() && currVertex->getID() == startVertex) {
         if (totalDistance < minDistance) {
             min_path = path;
             minDistance = totalDistance;
         }
         return;
     }
-
 
     for (auto edge : currVertex->getAdj()) {
         if (!edge->getDest()->isVisited()) {
@@ -146,7 +145,7 @@ void Manager::backtracking(Graph& graph, std::vector<int>& path, std::vector<int
             path.push_back(edge->getDest()->getID());
             edge->getDest()->setVisited(true);
             totalDistance += edge->getDistance();
-            backtracking(graph, path, min_path, minDistance, totalDistance, edge->getDest());
+            backtracking(graph, path, min_path, minDistance, totalDistance, edge->getDest(), startVertex);
             path.pop_back();
             edge->getDest()->setVisited(false);
             totalDistance -= edge->getDistance();
@@ -163,12 +162,14 @@ void Manager::backtrackBounding(Graph& graph) {
     double totalDistance = 0;
     Vertex* currVertex = graph.findVertex(0);
 
-    backtracking(graph, path, min_path, minDistance, totalDistance, currVertex);
+    backtracking(graph, path, min_path, minDistance, totalDistance, currVertex, 0);
 
 
+    // add zero, to return to the starting point
+    min_path.insert(min_path.begin(), 0);
     std::cout << "Path: ";
-    for (auto v : min_path) {
-        std::cout << v << " ";
+    for (auto it = min_path.rbegin(); it != min_path.rend(); ++it) {
+        std::cout << *it << " ";
     }
     std::cout << std::endl;
 
@@ -176,6 +177,7 @@ void Manager::backtrackBounding(Graph& graph) {
     std::cout << "Execution time (milliseconds): " << (clock() - start) << "ms" << std::endl;
     std::cout << "Execution time (seconds): " << (double)(clock() - start) / CLOCKS_PER_SEC << "s" << std::endl;
 }
+
 
 
 
@@ -294,6 +296,7 @@ void Manager::triangular(Graph& graph) {
     if (previousVertex != nullptr) {
         totalDistance += getDistanceCoordHaversine(graph, graph.findVertex(0), lastVertex);
     }
+
 
     std::cout << "Path: ";
     for (auto v : path) {
