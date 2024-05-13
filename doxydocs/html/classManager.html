@@ -980,10 +980,10 @@ Este é o diagrama das funções que utilizam esta função:</div>
 <div class="line"><span class="lineno">  427</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Execution time (seconds): &quot;</span> &lt;&lt; (double)(clock() - start) / CLOCKS_PER_SEC &lt;&lt; <span class="stringliteral">&quot;s&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><span class="lineno">  428</span>}</div>
 <div class="ttc" id="aclassManager_html_a5430044353f0196006c164c1aaedcf54"><div class="ttname"><a href="classManager.html#a5430044353f0196006c164c1aaedcf54">Manager::prim</a></div><div class="ttdeci">std::vector&lt; Vertex * &gt; prim(Graph graph)</div><div class="ttdoc">Função que implementa o algoritmo Prim para encontrar uma MST de um grafo.</div><div class="ttdef"><b>Definition:</b> <a href="Manager_8cpp_source.html#l00237">Manager.cpp:237</a></div></div>
-<div class="ttc" id="aclassManager_html_ac029b0012cf6fa7a3796c75af9f1917d"><div class="ttname"><a href="classManager.html#ac029b0012cf6fa7a3796c75af9f1917d">Manager::getDistanceCoordHaversine</a></div><div class="ttdeci">double getDistanceCoordHaversine(Graph &amp;graph, Vertex *a, Vertex *b)</div><div class="ttdoc">Função que calcula a distância entre dois vértices, utilizando a fórmula de Haversine.</div><div class="ttdef"><b>Definition:</b> <a href="Manager_8cpp_source.html#l00763">Manager.cpp:763</a></div></div>
+<div class="ttc" id="aclassManager_html_ac029b0012cf6fa7a3796c75af9f1917d"><div class="ttname"><a href="classManager.html#ac029b0012cf6fa7a3796c75af9f1917d">Manager::getDistanceCoordHaversine</a></div><div class="ttdeci">double getDistanceCoordHaversine(Graph &amp;graph, Vertex *a, Vertex *b)</div><div class="ttdoc">Função que calcula a distância entre dois vértices, utilizando a fórmula de Haversine.</div><div class="ttdef"><b>Definition:</b> <a href="Manager_8cpp_source.html#l00764">Manager.cpp:764</a></div></div>
 <div class="ttc" id="aclassVertex_html_a15eeabbbb6d517af746ae137c6d5b595"><div class="ttname"><a href="classVertex.html#a15eeabbbb6d517af746ae137c6d5b595">Vertex::setVisited</a></div><div class="ttdeci">void setVisited(bool visited)</div><div class="ttdoc">Define se um vértice foi visitado.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00095">Graph.cpp:95</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referências <a class="el" href="Graph_8cpp_source.html#l00307">Graph::findVertex()</a>, <a class="el" href="Graph_8cpp_source.html#l00059">Vertex::getAdj()</a>, <a class="el" href="Manager_8cpp_source.html#l00763">getDistanceCoordHaversine()</a>, <a class="el" href="Manager_8h_source.html#l00051">graph</a>, <a class="el" href="Manager_8cpp_source.html#l00237">prim()</a> e <a class="el" href="Graph_8cpp_source.html#l00095">Vertex::setVisited()</a>.</p>
+<p class="reference">Referências <a class="el" href="Graph_8cpp_source.html#l00307">Graph::findVertex()</a>, <a class="el" href="Graph_8cpp_source.html#l00059">Vertex::getAdj()</a>, <a class="el" href="Manager_8cpp_source.html#l00764">getDistanceCoordHaversine()</a>, <a class="el" href="Manager_8h_source.html#l00051">graph</a>, <a class="el" href="Manager_8cpp_source.html#l00237">prim()</a> e <a class="el" href="Graph_8cpp_source.html#l00095">Vertex::setVisited()</a>.</p>
 
 <p class="reference">Referenciado por <a class="el" href="Menu_8cpp_source.html#l00237">Menu::mainMenu()</a> e <a class="el" href="Menu_8cpp_source.html#l00312">Menu::mainMenuToy()</a>.</p>
 <div class="dynheader">
@@ -1069,22 +1069,22 @@ Este é o diagrama das funções que utilizam esta função:</div>
 </dl>
 <dl class="section return"><dt>Retorna</dt><dd>distância entre os dois vértices </dd></dl>
 
-<p class="definition">Definido na linha <a class="el" href="Manager_8cpp_source.html#l00763">763</a> do ficheiro <a class="el" href="Manager_8cpp_source.html">Manager.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  763</span>                                                                           {</div>
-<div class="line"><span class="lineno">  764</span> </div>
-<div class="line"><span class="lineno">  765</span>    <span class="keywordflow">if</span> (a-&gt;<a class="code hl_function" href="classVertex.html#a7455a09de51b274867edae2254cef38d">getLatitude</a>() == 0 &amp;&amp; a-&gt;<a class="code hl_function" href="classVertex.html#af1a2bee6c38f511cbfea082eb7149537">getLongitude</a>() == 0 &amp;&amp; b-&gt;<a class="code hl_function" href="classVertex.html#a7455a09de51b274867edae2254cef38d">getLatitude</a>() == 0 &amp;&amp; b-&gt;<a class="code hl_function" href="classVertex.html#af1a2bee6c38f511cbfea082eb7149537">getLongitude</a>() == 0) {</div>
-<div class="line"><span class="lineno">  766</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;&gt;&gt; Executing on a Toy graph &lt;&lt;&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  767</span>        <span class="keywordflow">return</span> 0.0;</div>
-<div class="line"><span class="lineno">  768</span>    }</div>
-<div class="line"><span class="lineno">  769</span> </div>
-<div class="line"><span class="lineno">  770</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classManager.html#a22689a9ae33f012e1fe501618c0fd283">haversine</a>(a-&gt;<a class="code hl_function" href="classVertex.html#a7455a09de51b274867edae2254cef38d">getLatitude</a>(),a-&gt;<a class="code hl_function" href="classVertex.html#af1a2bee6c38f511cbfea082eb7149537">getLongitude</a>(),b-&gt;<a class="code hl_function" href="classVertex.html#a7455a09de51b274867edae2254cef38d">getLatitude</a>(),b-&gt;<a class="code hl_function" href="classVertex.html#af1a2bee6c38f511cbfea082eb7149537">getLongitude</a>());</div>
-<div class="line"><span class="lineno">  771</span> </div>
-<div class="line"><span class="lineno">  772</span>}</div>
-<div class="ttc" id="aclassManager_html_a22689a9ae33f012e1fe501618c0fd283"><div class="ttname"><a href="classManager.html#a22689a9ae33f012e1fe501618c0fd283">Manager::haversine</a></div><div class="ttdeci">double haversine(double lat1, double lon1, double lat2, double lon2)</div><div class="ttdoc">Calcula a distância entre dois pontos na Terra, utilizando a fórmula de Haversine.</div><div class="ttdef"><b>Definition:</b> <a href="Manager_8cpp_source.html#l00794">Manager.cpp:794</a></div></div>
+<p class="definition">Definido na linha <a class="el" href="Manager_8cpp_source.html#l00764">764</a> do ficheiro <a class="el" href="Manager_8cpp_source.html">Manager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  764</span>                                                                           {</div>
+<div class="line"><span class="lineno">  765</span> </div>
+<div class="line"><span class="lineno">  766</span>    <span class="keywordflow">if</span> (a-&gt;<a class="code hl_function" href="classVertex.html#a7455a09de51b274867edae2254cef38d">getLatitude</a>() == 0 &amp;&amp; a-&gt;<a class="code hl_function" href="classVertex.html#af1a2bee6c38f511cbfea082eb7149537">getLongitude</a>() == 0 &amp;&amp; b-&gt;<a class="code hl_function" href="classVertex.html#a7455a09de51b274867edae2254cef38d">getLatitude</a>() == 0 &amp;&amp; b-&gt;<a class="code hl_function" href="classVertex.html#af1a2bee6c38f511cbfea082eb7149537">getLongitude</a>() == 0) {</div>
+<div class="line"><span class="lineno">  767</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;&gt;&gt; Executing on a Toy graph &lt;&lt;&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  768</span>        <span class="keywordflow">return</span> 0.0;</div>
+<div class="line"><span class="lineno">  769</span>    }</div>
+<div class="line"><span class="lineno">  770</span> </div>
+<div class="line"><span class="lineno">  771</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classManager.html#a22689a9ae33f012e1fe501618c0fd283">haversine</a>(a-&gt;<a class="code hl_function" href="classVertex.html#a7455a09de51b274867edae2254cef38d">getLatitude</a>(),a-&gt;<a class="code hl_function" href="classVertex.html#af1a2bee6c38f511cbfea082eb7149537">getLongitude</a>(),b-&gt;<a class="code hl_function" href="classVertex.html#a7455a09de51b274867edae2254cef38d">getLatitude</a>(),b-&gt;<a class="code hl_function" href="classVertex.html#af1a2bee6c38f511cbfea082eb7149537">getLongitude</a>());</div>
+<div class="line"><span class="lineno">  772</span> </div>
+<div class="line"><span class="lineno">  773</span>}</div>
+<div class="ttc" id="aclassManager_html_a22689a9ae33f012e1fe501618c0fd283"><div class="ttname"><a href="classManager.html#a22689a9ae33f012e1fe501618c0fd283">Manager::haversine</a></div><div class="ttdeci">double haversine(double lat1, double lon1, double lat2, double lon2)</div><div class="ttdoc">Calcula a distância entre dois pontos na Terra, utilizando a fórmula de Haversine.</div><div class="ttdef"><b>Definition:</b> <a href="Manager_8cpp_source.html#l00795">Manager.cpp:795</a></div></div>
 <div class="ttc" id="aclassVertex_html_a7455a09de51b274867edae2254cef38d"><div class="ttname"><a href="classVertex.html#a7455a09de51b274867edae2254cef38d">Vertex::getLatitude</a></div><div class="ttdeci">double getLatitude() const</div><div class="ttdoc">Obtém a latitude de um vértice.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00179">Graph.cpp:179</a></div></div>
 <div class="ttc" id="aclassVertex_html_af1a2bee6c38f511cbfea082eb7149537"><div class="ttname"><a href="classVertex.html#af1a2bee6c38f511cbfea082eb7149537">Vertex::getLongitude</a></div><div class="ttdeci">double getLongitude() const</div><div class="ttdoc">Obtém a longitude de um vértice.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00170">Graph.cpp:170</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referências <a class="el" href="Graph_8cpp_source.html#l00179">Vertex::getLatitude()</a>, <a class="el" href="Graph_8cpp_source.html#l00170">Vertex::getLongitude()</a> e <a class="el" href="Manager_8cpp_source.html#l00794">haversine()</a>.</p>
+<p class="reference">Referências <a class="el" href="Graph_8cpp_source.html#l00179">Vertex::getLatitude()</a>, <a class="el" href="Graph_8cpp_source.html#l00170">Vertex::getLongitude()</a> e <a class="el" href="Manager_8cpp_source.html#l00795">haversine()</a>.</p>
 
 <p class="reference">Referenciado por <a class="el" href="Manager_8cpp_source.html#l00361">triangular()</a>.</p>
 <div class="dynheader">
@@ -1142,7 +1142,7 @@ Este é o diagrama das funções que utilizam esta função:</div>
 <p >Converte o circuito euleriano num circuito hamiltoniano</p>
 <p >Imprime o caminho e a distância, bem como o tempo de execução.</p>
 <p >É possível escolher o vértice de início bem como ver uma lista completa de vértices.</p>
-<p >Complexidade: </p><dl class="params"><dt>Parâmetros</dt><dd>
+<p >Complexidade: O(V+E) </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">graph</td><td>grafo a ser analisado </td></tr>
   </table>
@@ -1241,12 +1241,12 @@ Este é o diagrama das funções que utilizam esta função:</div>
 <div class="ttc" id="aclassGraph_html"><div class="ttname"><a href="classGraph.html">Graph</a></div><div class="ttdef"><b>Definition:</b> <a href="Graph_8h_source.html#l00090">Graph.h:90</a></div></div>
 <div class="ttc" id="aclassManager_html_a5420cad739f93d82ab6e06f36c870764"><div class="ttname"><a href="classManager.html#a5420cad739f93d82ab6e06f36c870764">Manager::combineMSTMWM</a></div><div class="ttdeci">Graph combineMSTMWM(Graph &amp;mst, Graph &amp;mwm)</div><div class="ttdoc">Função que combina a MST e o MWM num grafo.</div><div class="ttdef"><b>Definition:</b> <a href="Manager_8cpp_source.html#l00665">Manager.cpp:665</a></div></div>
 <div class="ttc" id="aclassManager_html_a5fb41399204825eb35a0b6c7b87d077c"><div class="ttname"><a href="classManager.html#a5fb41399204825eb35a0b6c7b87d077c">Manager::MST</a></div><div class="ttdeci">Graph MST(Graph &amp;graph, int startingVert)</div><div class="ttdoc">Função que implementa Prim para encontrar a MST de um grafo.</div><div class="ttdef"><b>Definition:</b> <a href="Manager_8cpp_source.html#l00550">Manager.cpp:550</a></div></div>
-<div class="ttc" id="aclassManager_html_a7262179df06f129c8c36a0a06c18e6c8"><div class="ttname"><a href="classManager.html#a7262179df06f129c8c36a0a06c18e6c8">Manager::findHamiltonCircuit</a></div><div class="ttdeci">std::vector&lt; int &gt; findHamiltonCircuit(std::vector&lt; int &gt; &amp;eulerCircuit)</div><div class="ttdoc">Função que encontra o circuito hamiltoniano num grafo.</div><div class="ttdef"><b>Definition:</b> <a href="Manager_8cpp_source.html#l00734">Manager.cpp:734</a></div></div>
+<div class="ttc" id="aclassManager_html_a7262179df06f129c8c36a0a06c18e6c8"><div class="ttname"><a href="classManager.html#a7262179df06f129c8c36a0a06c18e6c8">Manager::findHamiltonCircuit</a></div><div class="ttdeci">std::vector&lt; int &gt; findHamiltonCircuit(std::vector&lt; int &gt; &amp;eulerCircuit)</div><div class="ttdoc">Função que encontra o circuito hamiltoniano num grafo.</div><div class="ttdef"><b>Definition:</b> <a href="Manager_8cpp_source.html#l00735">Manager.cpp:735</a></div></div>
 <div class="ttc" id="aclassManager_html_ac2e935c96fc2c321b225a78ce1807a3c"><div class="ttname"><a href="classManager.html#ac2e935c96fc2c321b225a78ce1807a3c">Manager::findEulerCircuit</a></div><div class="ttdeci">std::vector&lt; int &gt; findEulerCircuit(Graph &amp;graph)</div><div class="ttdoc">Função que encontra o circuito euleriano num grafo.</div><div class="ttdef"><b>Definition:</b> <a href="Manager_8cpp_source.html#l00684">Manager.cpp:684</a></div></div>
 <div class="ttc" id="aclassManager_html_ad5e8470f3c6eda3cad3abf0f6e2f4359"><div class="ttname"><a href="classManager.html#ad5e8470f3c6eda3cad3abf0f6e2f4359">Manager::findOddDegree</a></div><div class="ttdeci">std::vector&lt; Vertex * &gt; findOddDegree(Graph &amp;mst)</div><div class="ttdoc">Função que encontra os vértices com grau ímpar num grafo.</div><div class="ttdef"><b>Definition:</b> <a href="Manager_8cpp_source.html#l00589">Manager.cpp:589</a></div></div>
 <div class="ttc" id="aclassManager_html_ae0fd1124e1177a18ecafbff73f5519c8"><div class="ttname"><a href="classManager.html#ae0fd1124e1177a18ecafbff73f5519c8">Manager::findMWM</a></div><div class="ttdeci">Graph findMWM(Graph &amp;graph, std::vector&lt; Vertex * &gt; &amp;oddDegree)</div><div class="ttdoc">Função que encontra o MWM (Minimum Weight Matching) num grafo.</div><div class="ttdef"><b>Definition:</b> <a href="Manager_8cpp_source.html#l00623">Manager.cpp:623</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referências <a class="el" href="Manager_8cpp_source.html#l00665">combineMSTMWM()</a>, <a class="el" href="Manager_8cpp_source.html#l00684">findEulerCircuit()</a>, <a class="el" href="Manager_8cpp_source.html#l00734">findHamiltonCircuit()</a>, <a class="el" href="Manager_8cpp_source.html#l00623">findMWM()</a>, <a class="el" href="Manager_8cpp_source.html#l00589">findOddDegree()</a>, <a class="el" href="Graph_8cpp_source.html#l00307">Graph::findVertex()</a>, <a class="el" href="Graph_8cpp_source.html#l00248">Edge::getDistance()</a>, <a class="el" href="Graph_8cpp_source.html#l00297">Graph::getVertexSet()</a>, <a class="el" href="Manager_8h_source.html#l00051">graph</a> e <a class="el" href="Manager_8cpp_source.html#l00550">MST()</a>.</p>
+<p class="reference">Referências <a class="el" href="Manager_8cpp_source.html#l00665">combineMSTMWM()</a>, <a class="el" href="Manager_8cpp_source.html#l00684">findEulerCircuit()</a>, <a class="el" href="Manager_8cpp_source.html#l00735">findHamiltonCircuit()</a>, <a class="el" href="Manager_8cpp_source.html#l00623">findMWM()</a>, <a class="el" href="Manager_8cpp_source.html#l00589">findOddDegree()</a>, <a class="el" href="Graph_8cpp_source.html#l00307">Graph::findVertex()</a>, <a class="el" href="Graph_8cpp_source.html#l00248">Edge::getDistance()</a>, <a class="el" href="Graph_8cpp_source.html#l00297">Graph::getVertexSet()</a>, <a class="el" href="Manager_8h_source.html#l00051">graph</a> e <a class="el" href="Manager_8cpp_source.html#l00550">MST()</a>.</p>
 
 <p class="reference">Referenciado por <a class="el" href="Menu_8cpp_source.html#l00237">Menu::mainMenu()</a> e <a class="el" href="Menu_8cpp_source.html#l00312">Menu::mainMenuToy()</a>.</p>
 <div class="dynheader">
@@ -1433,7 +1433,7 @@ Este é o diagrama das funções que utilizam esta função:</div>
 <p>Função que implementa Prim para encontrar a MST de um grafo. </p>
 <p >E converte a MST num grafo.</p>
 <p >É utilizada no algoritmo de Christofides.</p>
-<p >Complexidade: O(V+E)log(V)) </p><dl class="params"><dt>Parâmetros</dt><dd>
+<p >Complexidade: O((V+E)log(V)) </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">graph</td><td>grafo a ser analisado </td></tr>
     <tr><td class="paramname">startingVert</td><td>vértice de início (ID) </td></tr>
@@ -1801,30 +1801,30 @@ Este é o diagrama das funções que utilizam esta função:</div>
 <p >Saltando os vértices repetidos.</p>
 <p >Utilizada no algoritmo de Christofides. </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">eulerCircuit</td><td>circuito euleriano </td></tr>
+    <tr><td class="paramname">eulerCircuit</td><td>circuito euleriano</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>vetor com o circuito hamiltoniano (com os IDs dos vértices) </dd></dl>
+<p>Complexidade: O(n) </p><dl class="section return"><dt>Retorna</dt><dd>vetor com o circuito hamiltoniano (com os IDs dos vértices) </dd></dl>
 
-<p class="definition">Definido na linha <a class="el" href="Manager_8cpp_source.html#l00734">734</a> do ficheiro <a class="el" href="Manager_8cpp_source.html">Manager.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  734</span>                                                                        {</div>
-<div class="line"><span class="lineno">  735</span>    std::vector&lt;int&gt; hamilton;</div>
-<div class="line"><span class="lineno">  736</span>    std::unordered_set&lt;int&gt; isVisited;</div>
-<div class="line"><span class="lineno">  737</span> </div>
-<div class="line"><span class="lineno">  738</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> vert : eulerCircuit) {</div>
-<div class="line"><span class="lineno">  739</span>        <span class="keywordflow">if</span> (isVisited.count(vert) == 0 || hamilton.empty()) {</div>
-<div class="line"><span class="lineno">  740</span>            hamilton.push_back(vert);</div>
-<div class="line"><span class="lineno">  741</span>            isVisited.insert(vert);</div>
-<div class="line"><span class="lineno">  742</span>        }</div>
-<div class="line"><span class="lineno">  743</span>    }</div>
-<div class="line"><span class="lineno">  744</span> </div>
-<div class="line"><span class="lineno">  745</span>    <span class="keywordflow">if</span> (!hamilton.empty()) {</div>
-<div class="line"><span class="lineno">  746</span>        hamilton.push_back(hamilton[0]);</div>
-<div class="line"><span class="lineno">  747</span>    }</div>
-<div class="line"><span class="lineno">  748</span> </div>
-<div class="line"><span class="lineno">  749</span>    <span class="keywordflow">return</span> hamilton;</div>
-<div class="line"><span class="lineno">  750</span>}</div>
+<p class="definition">Definido na linha <a class="el" href="Manager_8cpp_source.html#l00735">735</a> do ficheiro <a class="el" href="Manager_8cpp_source.html">Manager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  735</span>                                                                        {</div>
+<div class="line"><span class="lineno">  736</span>    std::vector&lt;int&gt; hamilton;</div>
+<div class="line"><span class="lineno">  737</span>    std::unordered_set&lt;int&gt; isVisited;</div>
+<div class="line"><span class="lineno">  738</span> </div>
+<div class="line"><span class="lineno">  739</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> vert : eulerCircuit) {</div>
+<div class="line"><span class="lineno">  740</span>        <span class="keywordflow">if</span> (isVisited.count(vert) == 0 || hamilton.empty()) {</div>
+<div class="line"><span class="lineno">  741</span>            hamilton.push_back(vert);</div>
+<div class="line"><span class="lineno">  742</span>            isVisited.insert(vert);</div>
+<div class="line"><span class="lineno">  743</span>        }</div>
+<div class="line"><span class="lineno">  744</span>    }</div>
+<div class="line"><span class="lineno">  745</span> </div>
+<div class="line"><span class="lineno">  746</span>    <span class="keywordflow">if</span> (!hamilton.empty()) {</div>
+<div class="line"><span class="lineno">  747</span>        hamilton.push_back(hamilton[0]);</div>
+<div class="line"><span class="lineno">  748</span>    }</div>
+<div class="line"><span class="lineno">  749</span> </div>
+<div class="line"><span class="lineno">  750</span>    <span class="keywordflow">return</span> hamilton;</div>
+<div class="line"><span class="lineno">  751</span>}</div>
 </div><!-- fragment -->
 <p class="reference">Referenciado por <a class="el" href="Manager_8cpp_source.html#l00454">christofides()</a>.</p>
 <div class="dynheader">
@@ -2029,25 +2029,25 @@ Este é o diagrama das funções que utilizam esta função:</div>
 </dl>
 <dl class="section return"><dt>Retorna</dt><dd>distância entre os dois pontos </dd></dl>
 
-<p class="definition">Definido na linha <a class="el" href="Manager_8cpp_source.html#l00794">794</a> do ficheiro <a class="el" href="Manager_8cpp_source.html">Manager.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  794</span>                                                                            {</div>
-<div class="line"><span class="lineno">  795</span>    <span class="keywordtype">double</span> delta_lat = <a class="code hl_function" href="classManager.html#a8e2dcb9f47e0defa878c625ba35da90c">convert_to_radians</a>(lat2 - lat1);</div>
-<div class="line"><span class="lineno">  796</span>    <span class="keywordtype">double</span> delta_lon = <a class="code hl_function" href="classManager.html#a8e2dcb9f47e0defa878c625ba35da90c">convert_to_radians</a>(lon2 - lon1);</div>
-<div class="line"><span class="lineno">  797</span> </div>
-<div class="line"><span class="lineno">  798</span>    <span class="keywordtype">double</span> converted_lat1 = <a class="code hl_function" href="classManager.html#a8e2dcb9f47e0defa878c625ba35da90c">convert_to_radians</a>(lat1);</div>
-<div class="line"><span class="lineno">  799</span>    <span class="keywordtype">double</span> converted_lat2 = <a class="code hl_function" href="classManager.html#a8e2dcb9f47e0defa878c625ba35da90c">convert_to_radians</a>(lat2);</div>
-<div class="line"><span class="lineno">  800</span> </div>
-<div class="line"><span class="lineno">  801</span>    <span class="comment">// sin^2(delta_lat/2) + cos(rad_lat1) * cos(rad_lat2) * sin^2(delta_lon/2)</span></div>
-<div class="line"><span class="lineno">  802</span>    <span class="keywordtype">double</span> aux = std::pow(std::sin(delta_lat / 2), 2) + std::cos(converted_lat1) * std::cos(converted_lat2) * std::pow(std::sin(delta_lon/ 2), 2);</div>
-<div class="line"><span class="lineno">  803</span>    <span class="keywordtype">double</span> c = 2.0 * std::atan2(std::sqrt(aux), std::sqrt(1 - aux));</div>
-<div class="line"><span class="lineno">  804</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> earthRadius = 6371.0;</div>
-<div class="line"><span class="lineno">  805</span>    <span class="keywordflow">return</span> earthRadius * c;</div>
-<div class="line"><span class="lineno">  806</span>}</div>
-<div class="ttc" id="aclassManager_html_a8e2dcb9f47e0defa878c625ba35da90c"><div class="ttname"><a href="classManager.html#a8e2dcb9f47e0defa878c625ba35da90c">Manager::convert_to_radians</a></div><div class="ttdeci">double convert_to_radians(double coord)</div><div class="ttdoc">Converte coordenadas de graus para radianos.</div><div class="ttdef"><b>Definition:</b> <a href="Manager_8cpp_source.html#l00780">Manager.cpp:780</a></div></div>
+<p class="definition">Definido na linha <a class="el" href="Manager_8cpp_source.html#l00795">795</a> do ficheiro <a class="el" href="Manager_8cpp_source.html">Manager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  795</span>                                                                            {</div>
+<div class="line"><span class="lineno">  796</span>    <span class="keywordtype">double</span> delta_lat = <a class="code hl_function" href="classManager.html#a8e2dcb9f47e0defa878c625ba35da90c">convert_to_radians</a>(lat2 - lat1);</div>
+<div class="line"><span class="lineno">  797</span>    <span class="keywordtype">double</span> delta_lon = <a class="code hl_function" href="classManager.html#a8e2dcb9f47e0defa878c625ba35da90c">convert_to_radians</a>(lon2 - lon1);</div>
+<div class="line"><span class="lineno">  798</span> </div>
+<div class="line"><span class="lineno">  799</span>    <span class="keywordtype">double</span> converted_lat1 = <a class="code hl_function" href="classManager.html#a8e2dcb9f47e0defa878c625ba35da90c">convert_to_radians</a>(lat1);</div>
+<div class="line"><span class="lineno">  800</span>    <span class="keywordtype">double</span> converted_lat2 = <a class="code hl_function" href="classManager.html#a8e2dcb9f47e0defa878c625ba35da90c">convert_to_radians</a>(lat2);</div>
+<div class="line"><span class="lineno">  801</span> </div>
+<div class="line"><span class="lineno">  802</span>    <span class="comment">// sin^2(delta_lat/2) + cos(rad_lat1) * cos(rad_lat2) * sin^2(delta_lon/2)</span></div>
+<div class="line"><span class="lineno">  803</span>    <span class="keywordtype">double</span> aux = std::pow(std::sin(delta_lat / 2), 2) + std::cos(converted_lat1) * std::cos(converted_lat2) * std::pow(std::sin(delta_lon/ 2), 2);</div>
+<div class="line"><span class="lineno">  804</span>    <span class="keywordtype">double</span> c = 2.0 * std::atan2(std::sqrt(aux), std::sqrt(1 - aux));</div>
+<div class="line"><span class="lineno">  805</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> earthRadius = 6371.0;</div>
+<div class="line"><span class="lineno">  806</span>    <span class="keywordflow">return</span> earthRadius * c;</div>
+<div class="line"><span class="lineno">  807</span>}</div>
+<div class="ttc" id="aclassManager_html_a8e2dcb9f47e0defa878c625ba35da90c"><div class="ttname"><a href="classManager.html#a8e2dcb9f47e0defa878c625ba35da90c">Manager::convert_to_radians</a></div><div class="ttdeci">double convert_to_radians(double coord)</div><div class="ttdoc">Converte coordenadas de graus para radianos.</div><div class="ttdef"><b>Definition:</b> <a href="Manager_8cpp_source.html#l00781">Manager.cpp:781</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Referências <a class="el" href="Manager_8cpp_source.html#l00780">convert_to_radians()</a>.</p>
+<p class="reference">Referências <a class="el" href="Manager_8cpp_source.html#l00781">convert_to_radians()</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="Manager_8cpp_source.html#l00763">getDistanceCoordHaversine()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="Manager_8cpp_source.html#l00764">getDistanceCoordHaversine()</a>.</p>
 <div class="dynheader">
 Grafo de chamadas desta função:</div>
 <div class="dyncontent">
@@ -2101,12 +2101,12 @@ Este é o diagrama das funções que utilizam esta função:</div>
 </dl>
 <dl class="section return"><dt>Retorna</dt><dd>coordenada em radianos </dd></dl>
 
-<p class="definition">Definido na linha <a class="el" href="Manager_8cpp_source.html#l00780">780</a> do ficheiro <a class="el" href="Manager_8cpp_source.html">Manager.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  780</span>                                               {</div>
-<div class="line"><span class="lineno">  781</span>    <span class="keywordflow">return</span> coord * M_PI / 180.0;</div>
-<div class="line"><span class="lineno">  782</span>}</div>
+<p class="definition">Definido na linha <a class="el" href="Manager_8cpp_source.html#l00781">781</a> do ficheiro <a class="el" href="Manager_8cpp_source.html">Manager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  781</span>                                               {</div>
+<div class="line"><span class="lineno">  782</span>    <span class="keywordflow">return</span> coord * M_PI / 180.0;</div>
+<div class="line"><span class="lineno">  783</span>}</div>
 </div><!-- fragment -->
-<p class="reference">Referenciado por <a class="el" href="Manager_8cpp_source.html#l00794">haversine()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="Manager_8cpp_source.html#l00795">haversine()</a>.</p>
 <div class="dynheader">
 Este é o diagrama das funções que utilizam esta função:</div>
 <div class="dyncontent">
@@ -2164,7 +2164,7 @@ Este é o diagrama das funções que utilizam esta função:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classManager.html">Manager</a></li>
-    <li class="footer">Gerado em Segunda, 13 de Maio de 2024 16:01:26 para TSP - Project 2 (DA 2023/24) por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+    <li class="footer">Gerado em Segunda, 13 de Maio de 2024 16:30:40 para TSP - Project 2 (DA 2023/24) por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

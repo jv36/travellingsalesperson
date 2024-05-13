@@ -448,7 +448,7 @@ void Manager::triangular(Graph& graph) {
  * @brief Converte o circuito euleriano num circuito hamiltoniano
  * @brief Imprime o caminho e a distância, bem como o tempo de execução.
  * @brief É possível escolher o vértice de início bem como ver uma lista completa de vértices.
- * @details Complexidade:
+ * @details Complexidade: O(V+E)
  * @param graph: grafo a ser analisado
  */
 void Manager::christofides(Graph& graph) {
@@ -542,7 +542,7 @@ void Manager::christofides(Graph& graph) {
  * @brief Função que implementa Prim para encontrar a MST de um grafo.
  * @brief E converte a MST num grafo.
  * @brief É utilizada no algoritmo de Christofides.
- * @details Complexidade: O(V+E)log(V))
+ * @details Complexidade: O((V+E)log(V))
  * @param graph: grafo a ser analisado
  * @param startingVert: vértice de início (ID)
  * @return grafo com a MST
@@ -729,6 +729,7 @@ std::vector<int> Manager::findEulerCircuit(Graph& graph) {
  * @brief Saltando os vértices repetidos.
  * @brief Utilizada no algoritmo de Christofides.
  * @param eulerCircuit: circuito euleriano
+ * @details Complexidade: O(n)
  * @return vetor com o circuito hamiltoniano (com os IDs dos vértices)
  */
 std::vector<int> Manager::findHamiltonCircuit(std::vector<int>& eulerCircuit) {
