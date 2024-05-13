@@ -1,0 +1,9 @@
+<map id="Manager::findMWM" name="Manager::findMWM">
+<area shape="rect" id="node1" title="Função que encontra o MWM (Minimum Weight Matching) num grafo." alt="" coords="5,81,153,108"/>
+<area shape="rect" id="node2" href="$classGraph.html#a516f4487d70f4b15e413447afa8c2310" title="Adiciona uma aresta a um grafo (this), dado o conteúdo dos vértices de origem e destino e o peso da a..." alt="" coords="225,56,351,83"/>
+<area shape="rect" id="node4" href="$classGraph.html#a59a5e666d2b7dc025704d7e6bce95c01" title="Adiciona um vértice com um dado conteúdo (v) a um grafo (this)." alt="" coords="221,107,355,133"/>
+<area shape="rect" id="node5" href="$classVertex.html#af59c1c694521d7806284fec630ac6360" title="Obtém o código (ID) de um vértice." alt="" coords="437,132,543,159"/>
+<area shape="rect" id="node6" href="$classGraph.html#a51bcd802bed8dcce5bf066cd02706124" title="Obtém a distância entre dois vértices." alt="" coords="201,5,375,32"/>
+<area shape="rect" id="node3" href="$classGraph.html#a80e4dc6dc4d094e7c728015346705863" title="Função auxiliar para encontrar um vértice com um dado conteúdo." alt="" coords="423,56,557,83"/>
+<area shape="rect" id="node7" href="$classVertex.html#a9858f2aa388d2bfb49d9df8f4504b5a0" title="Obtém a lista de arestas adjacentes a um vértice." alt="" coords="433,5,547,32"/>
+</map>

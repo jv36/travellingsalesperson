@@ -1,0 +1,6 @@
+<map id="Vertex::deleteEdge" name="Vertex::deleteEdge">
+<area shape="rect" id="node1" title="Remove uma aresta de um vértice." alt="" coords="472,31,617,57"/>
+<area shape="rect" id="node2" href="$classVertex.html#a37a174a65c97bd548838c5d03961e735" title="Função auxiliar para remover uma aresta de saída (com um destino (d) dado) de um vértice (this)." alt="" coords="237,5,391,32"/>
+<area shape="rect" id="node4" href="$classVertex.html#afcde6d707aff7627df7adde8d8b74a89" title="Remove todos os outgoing edges de um vértice.t." alt="" coords="204,56,424,83"/>
+<area shape="rect" id="node3" href="$classGraph.html#a764e3181643efb34ff0209ca6e33275b" title="Remove uma aresta de um grafo (this)." alt="" coords="5,5,156,32"/>
+</map>

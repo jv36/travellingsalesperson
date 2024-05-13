@@ -1,0 +1,24 @@
+<map id="Manager::christofides" name="Manager::christofides">
+<area shape="rect" id="node1" title="Função que implementa o algoritmo de Christofides para encontrar um caminho aproximado num grafo." alt="" coords="5,233,168,260"/>
+<area shape="rect" id="node2" href="$classManager.html#a5420cad739f93d82ab6e06f36c870764" title="Função que combina a MST e o MWM num grafo." alt="" coords="219,183,427,209"/>
+<area shape="rect" id="node4" href="$classGraph.html#a80e4dc6dc4d094e7c728015346705863" title="Função auxiliar para encontrar um vértice com um dado conteúdo." alt="" coords="747,448,881,475"/>
+<area shape="rect" id="node5" href="$classGraph.html#a619ac583094079134074658e29463c0e" title="Obtém o conjunto de vértices de um grafo." alt="" coords="737,83,891,109"/>
+<area shape="rect" id="node6" href="$classManager.html#ac2e935c96fc2c321b225a78ce1807a3c" title="Função que encontra o circuito euleriano num grafo." alt="" coords="487,107,674,133"/>
+<area shape="rect" id="node7" href="$classManager.html#a7262179df06f129c8c36a0a06c18e6c8" title="Função que encontra o circuito hamiltoniano num grafo." alt="" coords="216,233,429,260"/>
+<area shape="rect" id="node8" href="$classManager.html#ae0fd1124e1177a18ecafbff73f5519c8" title="Função que encontra o MWM (Minimum Weight Matching) num grafo." alt="" coords="249,461,397,488"/>
+<area shape="rect" id="node14" href="$classManager.html#ad5e8470f3c6eda3cad3abf0f6e2f4359" title="Função que encontra os vértices com grau ímpar num grafo." alt="" coords="231,5,415,32"/>
+<area shape="rect" id="node15" href="$classEdge.html#afd6d96365c7158f369125bf2958ca511" title="Obtém a distância de uma aresta." alt="" coords="253,411,393,437"/>
+<area shape="rect" id="node16" href="$classManager.html#a5fb41399204825eb35a0b6c7b87d077c" title="Função que implementa Prim para encontrar a MST de um grafo." alt="" coords="265,284,380,311"/>
+<area shape="rect" id="node3" href="$classGraph.html#a5d6b6b10ebe49cc0191ab45151cd49e7" title="Adiciona uma aresta bidirecional a um grafo (this)." alt="" coords="477,309,684,336"/>
+<area shape="rect" id="node9" href="$classGraph.html#a516f4487d70f4b15e413447afa8c2310" title="Adiciona uma aresta a um grafo (this), dado o conteúdo dos vértices de origem e destino e o peso da a..." alt="" coords="518,461,643,488"/>
+<area shape="rect" id="node10" href="$classGraph.html#a59a5e666d2b7dc025704d7e6bce95c01" title="Adiciona um vértice com um dado conteúdo (v) a um grafo (this)." alt="" coords="513,411,648,437"/>
+<area shape="rect" id="node11" href="$classVertex.html#af59c1c694521d7806284fec630ac6360" title="Obtém o código (ID) de um vértice." alt="" coords="761,505,867,532"/>
+<area shape="rect" id="node12" href="$classGraph.html#a51bcd802bed8dcce5bf066cd02706124" title="Obtém a distância entre dois vértices." alt="" coords="494,563,667,589"/>
+<area shape="rect" id="node13" href="$classVertex.html#a9858f2aa388d2bfb49d9df8f4504b5a0" title="Obtém a lista de arestas adjacentes a um vértice." alt="" coords="757,563,871,589"/>
+<area shape="rect" id="node17" href="$classManager.html#a0c79c6cde5e5dbe53a5a1d0ebb599030" title="Função que implementa o algoritmo Prim para encontrar uma MST de um grafo." alt="" coords="485,259,677,285"/>
+<area shape="rect" id="node18" href="$classMutablePriorityQueue.html#a0878839cc1d2dba2b8ab2e589ecc6405" title=" " alt="" coords="732,251,896,293"/>
+<area shape="rect" id="node19" href="$classMutablePriorityQueue.html#a2edbb1f4a6fa3ff735700dfcebebe8d4" title=" " alt="" coords="732,317,896,358"/>
+<area shape="rect" id="node20" href="$classMutablePriorityQueue.html#a3880874d7364279ac0d6d31302b28853" title=" " alt="" coords="732,382,896,423"/>
+<area shape="rect" id="node21" href="$classMutablePriorityQueue.html#a058fc182052af82e10cc3719e448b62d" title=" " alt="" coords="732,134,896,175"/>
+<area shape="rect" id="node22" href="$classVertex.html#a6939bef79bfe5fe5bf77d9fd1bd70085" title="Define a distância de um vértice." alt="" coords="755,200,873,227"/>
+</map>

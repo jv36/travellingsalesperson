@@ -1,0 +1,8 @@
+<map id="Graph::removeEdge" name="Graph::removeEdge">
+<area shape="rect" id="node1" title="Remove uma aresta de um grafo (this)." alt="" coords="5,31,156,57"/>
+<area shape="rect" id="node2" href="$classGraph.html#a80e4dc6dc4d094e7c728015346705863" title="Função auxiliar para encontrar um vértice com um dado conteúdo." alt="" coords="214,5,349,32"/>
+<area shape="rect" id="node3" href="$classVertex.html#a37a174a65c97bd548838c5d03961e735" title="Função auxiliar para remover uma aresta de saída (com um destino (d) dado) de um vértice (this)." alt="" coords="204,56,359,83"/>
+<area shape="rect" id="node4" href="$classVertex.html#ac2a80daa5a6a208173f55d4d161334f1" title="Remove uma aresta de um vértice." alt="" coords="407,5,552,32"/>
+<area shape="rect" id="node5" href="$classEdge.html#a5cda44e9ba257b03963a1ac301371a59" title="Obtém o vértice de destino de uma aresta." alt="" coords="600,31,713,57"/>
+<area shape="rect" id="node6" href="$classVertex.html#af59c1c694521d7806284fec630ac6360" title="Obtém o código (ID) de um vértice." alt="" coords="426,107,533,133"/>
+</map>

@@ -6,6 +6,13 @@
 #include "Manager.h"
 #include <iostream>
 
+/**
+ * @brief Menu inicial. Permite ao utilizador escolher o tipo de dataset a utilizar.
+ * @brief O utilizador pode escolher entre toy-graphs, extra-fully-connected graphs e real-world graphs.
+ * @brief Após a escolha, o utilizador é redirecionado para o seletor correspondente.
+ * @details Complexidade: O(1)
+ * @return
+ */
 int Menu::main() {
 
     Manager manager;
@@ -48,6 +55,11 @@ int Menu::main() {
     return 0;
 }
 
+/**
+ * @brief Permite ao utilizador escolher o tipo de toy-graph a utilizar.
+ * @details Complexidade: O(1)
+ * @return
+ */
 int Menu::toySelector() {
     std::cout << "+---------------------------------------------------------+\n";
     std::cout << "| TOY-GRAPHS - Select the desired type:                   |\n";
@@ -83,10 +95,15 @@ int Menu::toySelector() {
             manager.createToyGraphs("../datasets/toy_graphs/tourism.csv", graph);
             break;
     }
-    mainMenu();
+    mainMenuToy();
     return 0;
 }
 
+/**
+ * @brief Permite ao utilizador escolher o tipo de real-world graph a utilizar.
+ * @details Complexidade: O(1)
+ * @return
+ */
 int Menu::realWorldSelector() {
     std::cout << "+---------------------------------------------------------+\n";
     std::cout << "| REAL-WORLD - Select the desired type:                   |\n";
@@ -129,6 +146,11 @@ int Menu::realWorldSelector() {
     return 0;
 }
 
+/**
+ * @brief Permite ao utilizador escolher o tipo de extra-fully-connected graph a utilizar.
+ * @details Complexidade: O(1)
+ * @return
+ */
 int Menu::extraFullyConnectedSelector() {
     std::cout << "+---------------------------------------------------------+\n";
     std::cout << "| FULLY-CONNECTED - Select the number of edges:           |\n";
@@ -206,6 +228,12 @@ int Menu::extraFullyConnectedSelector() {
     return 0;
 }
 
+/**
+ * @brief Menu principal. Permite ao utilizador escolher a operação a realizar.
+ * @brief Só aparece em Real-world graphs e Extra-fully-connected graphs.
+ * @details Complexidade: O(1)
+ * @return
+ */
 int Menu::mainMenu() {
     std::cout << "+---------------------------------------------------------+\n";
     std::cout << "| Welcome to the TSP program.                             |\n";
@@ -215,11 +243,16 @@ int Menu::mainMenu() {
     std::cout << "| option 1, please input 1 in                             |\n";
     std::cout << "| the terminal.                                           |\n";
     std::cout << "|                                                         |\n";
-    std::cout << "| 4 - Change dataset                                      |\n";
+    std::cout << "| Please note that backtracking only works                |\n";
+    std::cout << "| with toy graphs. Change the dataset to use              |\n";
+    std::cout << "| such heuristic.                                         |\n";
+    std::cout << "|                                                         |\n";
+    std::cout << "| 5 - Change dataset                                      |\n";
     std::cout << "| ==================== Main Menu ======================== |\n";
     std::cout << "| 1 - Number of elements                                  |\n";
-    std::cout << "| 2 - Backtrack bounding                                  |\n";
-    std::cout << "| 3 - Exit                                                |\n";
+    std::cout << "| 2 - Triangular approximation                            |\n";
+    std::cout << "| 3 - Christofides algorithm (another TSP approach)       |\n";
+    std::cout << "| 4 - Exit                                                |\n";
     std::cout << "| ======================================================= |\n";
     std::cout << "| Please enter your choice:                               |\n";
     std::cout << "+---------------------------------------------------------+\n";
@@ -231,7 +264,7 @@ int Menu::mainMenu() {
         throw std::invalid_argument("Error 001: Your input was not an integer. Please restart the program and try again.");
     }
 
-    while ((n < 1 || n > 4 ) && !(std::cin.fail())) {
+    while ((n < 1 || n > 5 ) && !(std::cin.fail())) {
         std::cout << "Choose a valid option." << std::endl;
         std::cin >> n;
         std::cout << std::endl;
@@ -243,10 +276,10 @@ int Menu::mainMenu() {
             manager.counter(graph);
             break;
         case 2:
-            manager.backtrackBounding(graph);
+            manager.triangular(graph);
             break;
         case 3:
-            manager.triangular(graph);
+            manager.christofides(graph);
             break;
         case 4:
             exit(0);
@@ -264,6 +297,81 @@ int Menu::mainMenu() {
     std::cout << std::endl;
     if (c == 'y' || c == 'Y') {
         mainMenu();
+    } else {
+        exit(0);
+    }
+    return 0;
+}
+
+/**
+ * @brief Menu principal. Permite ao utilizador escolher a operação a realizar.
+ * @brief Só aparece em Toy-graphs. (devido à introdução do backtracking nestes grafos)
+ * @
+ * @return
+ */
+int Menu::mainMenuToy() {
+    std::cout << "+---------------------------------------------------------+\n";
+    std::cout << "| Welcome to the TSP program.                             |\n";
+    std::cout << "|                                                         |\n";
+    std::cout << "| Our menu works based on                                 |\n";
+    std::cout << "| number inputs! i.e., for                                |\n";
+    std::cout << "| option 1, please input 1 in                             |\n";
+    std::cout << "| the terminal.                                           |\n";
+    std::cout << "|                                                         |\n";
+    std::cout << "| 6 - Change dataset                                      |\n";
+    std::cout << "| ==================== Main Menu ======================== |\n";
+    std::cout << "| 1 - Number of elements                                  |\n";
+    std::cout << "| 2 - Backtrack bounding (toy graphs only)                |\n";
+    std::cout << "| 3 - Triangular approximation                            |\n";
+    std::cout << "| 4 - Christofides algorithm (another TSP approach)       |\n";
+    std::cout << "| 5 - Exit                                                |\n";
+    std::cout << "| ======================================================= |\n";
+    std::cout << "| Please enter your choice:                               |\n";
+    std::cout << "+---------------------------------------------------------+\n";
+    int n;
+    std::cin >> n;
+    std::cout << std::endl;
+
+    if (std::cin.fail()) {
+        throw std::invalid_argument("Error 001: Your input was not an integer. Please restart the program and try again.");
+    }
+
+    while ((n < 1 || n > 6 ) && !(std::cin.fail())) {
+        std::cout << "Choose a valid option." << std::endl;
+        std::cin >> n;
+        std::cout << std::endl;
+    }
+
+    std::vector<std::pair<std::vector<int>,double>> paths;
+    switch(n) {
+        case 1:
+            manager.counter(graph);
+            break;
+        case 2:
+            manager.backtrackBounding(graph);
+            break;
+        case 3:
+            manager.triangular(graph);
+            break;
+        case 4:
+            manager.christofides(graph);
+            break;
+        case 5:
+            exit(0);
+        case 6:
+            graph = Graph();
+            main();
+            break;
+    }
+
+    char c;
+    std::cout << std::endl;
+    std::cout << std::endl;
+    std::cout << "Do you wish to perform any other action? (y/n)" << std::endl;
+    std::cin >> c;
+    std::cout << std::endl;
+    if (c == 'y' || c == 'Y') {
+        mainMenuToy();
     } else {
         exit(0);
     }

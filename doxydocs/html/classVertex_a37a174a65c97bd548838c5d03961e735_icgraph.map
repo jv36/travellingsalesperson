@@ -1,0 +1,4 @@
+<map id="Vertex::removeEdge" name="Vertex::removeEdge">
+<area shape="rect" id="node1" title="Função auxiliar para remover uma aresta de saída (com um destino (d) dado) de um vértice (this)." alt="" coords="204,5,359,32"/>
+<area shape="rect" id="node2" href="$classGraph.html#a764e3181643efb34ff0209ca6e33275b" title="Remove uma aresta de um grafo (this)." alt="" coords="5,5,156,32"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="Manager::combineMSTMWM" name="Manager::combineMSTMWM">
+<area shape="rect" id="node1" title="Função que combina a MST e o MWM num grafo." alt="" coords="5,31,213,57"/>
+<area shape="rect" id="node2" href="$classGraph.html#a5d6b6b10ebe49cc0191ab45151cd49e7" title="Adiciona uma aresta bidirecional a um grafo (this)." alt="" coords="261,5,468,32"/>
+<area shape="rect" id="node4" href="$classGraph.html#a619ac583094079134074658e29463c0e" title="Obtém o conjunto de vértices de um grafo." alt="" coords="288,56,441,83"/>
+<area shape="rect" id="node3" href="$classGraph.html#a80e4dc6dc4d094e7c728015346705863" title="Função auxiliar para encontrar um vértice com um dado conteúdo." alt="" coords="516,5,651,32"/>
+</map>

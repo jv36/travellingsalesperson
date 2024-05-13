@@ -1,0 +1,8 @@
+<map id="Menu::extraFullyConnectedSelector" name="Menu::extraFullyConnectedSelector">
+<area shape="rect" id="node1" title="Permite ao utilizador escolher o tipo de extra&#45;fully&#45;connected graph a utilizar." alt="" coords="587,47,787,89"/>
+<area shape="rect" id="node2" href="$classMenu.html#a117fbfc3ae88c68edda0b4d401c4d67d" title="Menu inicial. Permite ao utilizador escolher o tipo de dataset a utilizar." alt="" coords="440,80,539,107"/>
+<area shape="rect" id="node3" href="$classMenu.html#af2479c56ab20abe25b90ad64fc092426" title="Menu principal. Permite ao utilizador escolher a operação a realizar." alt="" coords="246,29,381,56"/>
+<area shape="rect" id="node5" href="$classMenu.html#a4a0747df5cdc34f6f8dce688984d1c6b" title="Menu principal. Permite ao utilizador escolher a operação a realizar." alt="" coords="235,155,392,181"/>
+<area shape="rect" id="node4" href="$classMenu.html#a7477a8d66d749c6adb5d008c756263da" title="Permite ao utilizador escolher o tipo de real&#45;world graph a utilizar." alt="" coords="5,55,187,81"/>
+<area shape="rect" id="node6" href="$classMenu.html#afdf71c6eb4539655c2235bdc4edc302e" title="Permite ao utilizador escolher o tipo de toy&#45;graph a utilizar." alt="" coords="26,180,166,207"/>
+</map>

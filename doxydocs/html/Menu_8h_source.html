@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TSP - Project 2 (DA 2023/24): Código-Fonte de src/Menu.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TSP - Project 2 (DA 2023/24)
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Localizar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('Menu_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Menu.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Menu_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by joaomendes on 26-04-2024.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef TRAVELLINGSALESPERSON_MENU_H</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define TRAVELLINGSALESPERSON_MENU_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="Graph_8h.html">Graph.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="Manager_8h.html">Manager.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classMenu.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="classMenu.html">Menu</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classMenu.html#a117fbfc3ae88c68edda0b4d401c4d67d">main</a>();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classMenu.html#af2479c56ab20abe25b90ad64fc092426">mainMenu</a>();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classMenu.html#a4a0747df5cdc34f6f8dce688984d1c6b">mainMenuToy</a>();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classMenu.html#afdf71c6eb4539655c2235bdc4edc302e">toySelector</a>();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classMenu.html#a7477a8d66d749c6adb5d008c756263da">realWorldSelector</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classMenu.html#a435b9fa4677e757df4858e3ed1ac8575">extraFullyConnectedSelector</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classMenu.html#a32d750a6decb4b27d7f44a0a333e0e2b">   20</a></span>    <a class="code hl_class" href="classManager.html">Manager</a> <a class="code hl_variable" href="classMenu.html#a32d750a6decb4b27d7f44a0a333e0e2b">manager</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classMenu.html#a2b279d51bfa387a7938f65eb59e9b437">   21</a></span>    <a class="code hl_class" href="classGraph.html">Graph</a> <a class="code hl_variable" href="classMenu.html#a2b279d51bfa387a7938f65eb59e9b437">graph</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>};</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#endif </span><span class="comment">//TRAVELLINGSALESPERSON_MENU_H</span></div>
+<div class="ttc" id="aGraph_8h_html"><div class="ttname"><a href="Graph_8h.html">Graph.h</a></div></div>
+<div class="ttc" id="aManager_8h_html"><div class="ttname"><a href="Manager_8h.html">Manager.h</a></div></div>
+<div class="ttc" id="aclassGraph_html"><div class="ttname"><a href="classGraph.html">Graph</a></div><div class="ttdef"><b>Definition:</b> <a href="Graph_8h_source.html#l00090">Graph.h:90</a></div></div>
+<div class="ttc" id="aclassManager_html"><div class="ttname"><a href="classManager.html">Manager</a></div><div class="ttdef"><b>Definition:</b> <a href="Manager_8h_source.html#l00012">Manager.h:12</a></div></div>
+<div class="ttc" id="aclassMenu_html"><div class="ttname"><a href="classMenu.html">Menu</a></div><div class="ttdef"><b>Definition:</b> <a href="Menu_8h_source.html#l00011">Menu.h:11</a></div></div>
+<div class="ttc" id="aclassMenu_html_a117fbfc3ae88c68edda0b4d401c4d67d"><div class="ttname"><a href="classMenu.html#a117fbfc3ae88c68edda0b4d401c4d67d">Menu::main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">Menu inicial. Permite ao utilizador escolher o tipo de dataset a utilizar.</div><div class="ttdef"><b>Definition:</b> <a href="Menu_8cpp_source.html#l00016">Menu.cpp:16</a></div></div>
+<div class="ttc" id="aclassMenu_html_a2b279d51bfa387a7938f65eb59e9b437"><div class="ttname"><a href="classMenu.html#a2b279d51bfa387a7938f65eb59e9b437">Menu::graph</a></div><div class="ttdeci">Graph graph</div><div class="ttdef"><b>Definition:</b> <a href="Menu_8h_source.html#l00021">Menu.h:21</a></div></div>
+<div class="ttc" id="aclassMenu_html_a32d750a6decb4b27d7f44a0a333e0e2b"><div class="ttname"><a href="classMenu.html#a32d750a6decb4b27d7f44a0a333e0e2b">Menu::manager</a></div><div class="ttdeci">Manager manager</div><div class="ttdef"><b>Definition:</b> <a href="Menu_8h_source.html#l00020">Menu.h:20</a></div></div>
+<div class="ttc" id="aclassMenu_html_a435b9fa4677e757df4858e3ed1ac8575"><div class="ttname"><a href="classMenu.html#a435b9fa4677e757df4858e3ed1ac8575">Menu::extraFullyConnectedSelector</a></div><div class="ttdeci">int extraFullyConnectedSelector()</div><div class="ttdoc">Permite ao utilizador escolher o tipo de extra-fully-connected graph a utilizar.</div><div class="ttdef"><b>Definition:</b> <a href="Menu_8cpp_source.html#l00154">Menu.cpp:154</a></div></div>
+<div class="ttc" id="aclassMenu_html_a4a0747df5cdc34f6f8dce688984d1c6b"><div class="ttname"><a href="classMenu.html#a4a0747df5cdc34f6f8dce688984d1c6b">Menu::mainMenuToy</a></div><div class="ttdeci">int mainMenuToy()</div><div class="ttdoc">Menu principal. Permite ao utilizador escolher a operação a realizar.</div><div class="ttdef"><b>Definition:</b> <a href="Menu_8cpp_source.html#l00312">Menu.cpp:312</a></div></div>
+<div class="ttc" id="aclassMenu_html_a7477a8d66d749c6adb5d008c756263da"><div class="ttname"><a href="classMenu.html#a7477a8d66d749c6adb5d008c756263da">Menu::realWorldSelector</a></div><div class="ttdeci">int realWorldSelector()</div><div class="ttdoc">Permite ao utilizador escolher o tipo de real-world graph a utilizar.</div><div class="ttdef"><b>Definition:</b> <a href="Menu_8cpp_source.html#l00107">Menu.cpp:107</a></div></div>
+<div class="ttc" id="aclassMenu_html_af2479c56ab20abe25b90ad64fc092426"><div class="ttname"><a href="classMenu.html#af2479c56ab20abe25b90ad64fc092426">Menu::mainMenu</a></div><div class="ttdeci">int mainMenu()</div><div class="ttdoc">Menu principal. Permite ao utilizador escolher a operação a realizar.</div><div class="ttdef"><b>Definition:</b> <a href="Menu_8cpp_source.html#l00237">Menu.cpp:237</a></div></div>
+<div class="ttc" id="aclassMenu_html_afdf71c6eb4539655c2235bdc4edc302e"><div class="ttname"><a href="classMenu.html#afdf71c6eb4539655c2235bdc4edc302e">Menu::toySelector</a></div><div class="ttdeci">int toySelector()</div><div class="ttdoc">Permite ao utilizador escolher o tipo de toy-graph a utilizar.</div><div class="ttdef"><b>Definition:</b> <a href="Menu_8cpp_source.html#l00063">Menu.cpp:63</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="Menu_8h.html">Menu.h</a></li>
+    <li class="footer">Gerado em Segunda, 13 de Maio de 2024 16:01:26 para TSP - Project 2 (DA 2023/24) por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<map id="Manager::MST" name="Manager::MST">
+<area shape="rect" id="node1" title="Função que implementa Prim para encontrar a MST de um grafo." alt="" coords="5,157,120,184"/>
+<area shape="rect" id="node2" href="$classGraph.html#a5d6b6b10ebe49cc0191ab45151cd49e7" title="Adiciona uma aresta bidirecional a um grafo (this)." alt="" coords="168,140,375,167"/>
+<area shape="rect" id="node4" href="$classGraph.html#a59a5e666d2b7dc025704d7e6bce95c01" title="Adiciona um vértice com um dado conteúdo (v) a um grafo (this)." alt="" coords="204,56,339,83"/>
+<area shape="rect" id="node6" href="$classManager.html#a0c79c6cde5e5dbe53a5a1d0ebb599030" title="Função que implementa o algoritmo Prim para encontrar uma MST de um grafo." alt="" coords="175,223,367,249"/>
+<area shape="rect" id="node10" href="$classGraph.html#a619ac583094079134074658e29463c0e" title="Obtém o conjunto de vértices de um grafo." alt="" coords="428,421,581,448"/>
+<area shape="rect" id="node3" href="$classGraph.html#a80e4dc6dc4d094e7c728015346705863" title="Função auxiliar para encontrar um vértice com um dado conteúdo." alt="" coords="437,56,572,83"/>
+<area shape="rect" id="node5" href="$classVertex.html#af59c1c694521d7806284fec630ac6360" title="Obtém o código (ID) de um vértice." alt="" coords="451,5,558,32"/>
+<area shape="rect" id="node7" href="$classMutablePriorityQueue.html#a0878839cc1d2dba2b8ab2e589ecc6405" title=" " alt="" coords="423,290,587,331"/>
+<area shape="rect" id="node8" href="$classMutablePriorityQueue.html#a2edbb1f4a6fa3ff735700dfcebebe8d4" title=" " alt="" coords="423,355,587,397"/>
+<area shape="rect" id="node9" href="$classMutablePriorityQueue.html#a3880874d7364279ac0d6d31302b28853" title=" " alt="" coords="423,107,587,149"/>
+<area shape="rect" id="node11" href="$classMutablePriorityQueue.html#a058fc182052af82e10cc3719e448b62d" title=" " alt="" coords="423,173,587,214"/>
+<area shape="rect" id="node12" href="$classVertex.html#a6939bef79bfe5fe5bf77d9fd1bd70085" title="Define a distância de um vértice." alt="" coords="445,239,564,265"/>
+</map>

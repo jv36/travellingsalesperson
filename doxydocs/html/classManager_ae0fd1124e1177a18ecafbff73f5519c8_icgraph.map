@@ -1,0 +1,10 @@
+<map id="Manager::findMWM" name="Manager::findMWM">
+<area shape="rect" id="node1" title="Função que encontra o MWM (Minimum Weight Matching) num grafo." alt="" coords="1187,147,1335,174"/>
+<area shape="rect" id="node2" href="$classManager.html#aa8988d9ef0d48aa0cfb72c83a4fa326b" title="Função que implementa o algoritmo de Christofides para encontrar um caminho aproximado num grafo." alt="" coords="976,147,1139,174"/>
+<area shape="rect" id="node3" href="$classMenu.html#af2479c56ab20abe25b90ad64fc092426" title="Menu principal. Permite ao utilizador escolher a operação a realizar." alt="" coords="793,97,928,123"/>
+<area shape="rect" id="node6" href="$classMenu.html#a4a0747df5cdc34f6f8dce688984d1c6b" title="Menu principal. Permite ao utilizador escolher a operação a realizar." alt="" coords="193,159,351,186"/>
+<area shape="rect" id="node4" href="$classMenu.html#a435b9fa4677e757df4858e3ed1ac8575" title="Permite ao utilizador escolher o tipo de extra&#45;fully&#45;connected graph a utilizar." alt="" coords="545,5,745,47"/>
+<area shape="rect" id="node8" href="$classMenu.html#a7477a8d66d749c6adb5d008c756263da" title="Permite ao utilizador escolher o tipo de real&#45;world graph a utilizar." alt="" coords="555,71,736,98"/>
+<area shape="rect" id="node5" href="$classMenu.html#a117fbfc3ae88c68edda0b4d401c4d67d" title="Menu inicial. Permite ao utilizador escolher o tipo de dataset a utilizar." alt="" coords="399,85,497,111"/>
+<area shape="rect" id="node7" href="$classMenu.html#afdf71c6eb4539655c2235bdc4edc302e" title="Permite ao utilizador escolher o tipo de toy&#45;graph a utilizar." alt="" coords="5,122,145,149"/>
+</map>

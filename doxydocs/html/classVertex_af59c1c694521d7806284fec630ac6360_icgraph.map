@@ -1,0 +1,19 @@
+<map id="Vertex::getID" name="Vertex::getID">
+<area shape="rect" id="node1" title="Obtém o código (ID) de um vértice." alt="" coords="1409,149,1516,176"/>
+<area shape="rect" id="node2" href="$classGraph.html#a59a5e666d2b7dc025704d7e6bce95c01" title="Adiciona um vértice com um dado conteúdo (v) a um grafo (this)." alt="" coords="1209,124,1343,151"/>
+<area shape="rect" id="node11" href="$classManager.html#ae0fd1124e1177a18ecafbff73f5519c8" title="Função que encontra o MWM (Minimum Weight Matching) num grafo." alt="" coords="969,175,1117,201"/>
+<area shape="rect" id="node14" href="$classManager.html#a31f4c0140bf8de1df556165d02063787" title="Função que implementa o backtracking para encontrar o caminho mais curto num grafo." alt="" coords="1191,73,1361,100"/>
+<area shape="rect" id="node16" href="$classVertex.html#a37a174a65c97bd548838c5d03961e735" title="Função auxiliar para remover uma aresta de saída (com um destino (d) dado) de um vértice (this)." alt="" coords="1199,259,1353,285"/>
+<area shape="rect" id="node3" href="$classManager.html#ad19012374d3d23a5c17c739ad1c22c74" title="Faz parse aos vértices dos grafos do tipo Real World." alt="" coords="944,226,1143,267"/>
+<area shape="rect" id="node10" href="$classManager.html#a515c94b4d9a919626fceb3b1658a1d8e" title="Faz parse aos vértices dos grafos do tipo Toy Graph." alt="" coords="440,5,636,32"/>
+<area shape="rect" id="node13" href="$classManager.html#a5fb41399204825eb35a0b6c7b87d077c" title="Função que implementa Prim para encontrar a MST de um grafo." alt="" coords="986,124,1101,151"/>
+<area shape="rect" id="node4" href="$classMenu.html#a435b9fa4677e757df4858e3ed1ac8575" title="Permite ao utilizador escolher o tipo de extra&#45;fully&#45;connected graph a utilizar." alt="" coords="690,226,890,267"/>
+<area shape="rect" id="node7" href="$classMenu.html#a7477a8d66d749c6adb5d008c756263da" title="Permite ao utilizador escolher o tipo de real&#45;world graph a utilizar." alt="" coords="5,252,187,279"/>
+<area shape="rect" id="node5" href="$classMenu.html#a117fbfc3ae88c68edda0b4d401c4d67d" title="Menu inicial. Permite ao utilizador escolher o tipo de dataset a utilizar." alt="" coords="489,183,587,209"/>
+<area shape="rect" id="node6" href="$classMenu.html#af2479c56ab20abe25b90ad64fc092426" title="Menu principal. Permite ao utilizador escolher a operação a realizar." alt="" coords="246,201,381,228"/>
+<area shape="rect" id="node8" href="$classMenu.html#a4a0747df5cdc34f6f8dce688984d1c6b" title="Menu principal. Permite ao utilizador escolher a operação a realizar." alt="" coords="235,76,392,103"/>
+<area shape="rect" id="node9" href="$classMenu.html#afdf71c6eb4539655c2235bdc4edc302e" title="Permite ao utilizador escolher o tipo de toy&#45;graph a utilizar." alt="" coords="26,76,166,103"/>
+<area shape="rect" id="node12" href="$classManager.html#aa8988d9ef0d48aa0cfb72c83a4fa326b" title="Função que implementa o algoritmo de Christofides para encontrar um caminho aproximado num grafo." alt="" coords="457,128,619,155"/>
+<area shape="rect" id="node15" href="$classManager.html#ac6d6ef3433df5093a9e67feb13bdd3f1" title="Função que chama a função de backtracking para encontrar o caminho mais curto num grafo." alt="" coords="684,73,896,100"/>
+<area shape="rect" id="node17" href="$classGraph.html#a764e3181643efb34ff0209ca6e33275b" title="Remove uma aresta de um grafo (this)." alt="" coords="968,292,1119,319"/>
+</map>

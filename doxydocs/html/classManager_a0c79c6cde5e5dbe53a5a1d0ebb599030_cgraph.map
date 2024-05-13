@@ -1,0 +1,10 @@
+<map id="Manager::christofidesPrim" name="Manager::christofidesPrim">
+<area shape="rect" id="node1" title="Função que implementa o algoritmo Prim para encontrar uma MST de um grafo." alt="" coords="5,202,197,229"/>
+<area shape="rect" id="node2" href="$classMutablePriorityQueue.html#a0878839cc1d2dba2b8ab2e589ecc6405" title=" " alt="" coords="245,5,409,47"/>
+<area shape="rect" id="node3" href="$classMutablePriorityQueue.html#a2edbb1f4a6fa3ff735700dfcebebe8d4" title=" " alt="" coords="245,71,409,112"/>
+<area shape="rect" id="node4" href="$classMutablePriorityQueue.html#a3880874d7364279ac0d6d31302b28853" title=" " alt="" coords="245,136,409,177"/>
+<area shape="rect" id="node5" href="$classGraph.html#a80e4dc6dc4d094e7c728015346705863" title="Função auxiliar para encontrar um vértice com um dado conteúdo." alt="" coords="260,202,395,229"/>
+<area shape="rect" id="node6" href="$classGraph.html#a619ac583094079134074658e29463c0e" title="Obtém o conjunto de vértices de um grafo." alt="" coords="251,253,404,279"/>
+<area shape="rect" id="node7" href="$classMutablePriorityQueue.html#a058fc182052af82e10cc3719e448b62d" title=" " alt="" coords="245,304,409,345"/>
+<area shape="rect" id="node8" href="$classVertex.html#a6939bef79bfe5fe5bf77d9fd1bd70085" title="Define a distância de um vértice." alt="" coords="268,370,387,397"/>
+</map>

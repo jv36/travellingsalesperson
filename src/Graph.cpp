@@ -1,6 +1,7 @@
 //
 // Created by joaomendes on 03-05-2024.
 //
+#include <limits>
 #include "Graph.h"
 
 /**
@@ -179,19 +180,40 @@ double Vertex::getLatitude() const{
     return this->latitude;
 }
 
+/**
+ * @brief Obtém a distância de um vértice.
+ * @details Complexidade: O(1)
+ * @return Retorna a distância de um vértice.
+ */
 double Vertex::getDist() const {
     return this->dist;
 }
+
+/**
+ * @brief Define a distância de um vértice.
+ * @details Complexidade: O(1)
+ * @param dist: distância
+ */
 void Vertex::setDist(double dist) {
     this->dist = dist;
 }
 
-int Vertex::getTreeDeg() const {
-    return this->treeDeg;
+/**
+ * @brief Define o indegree (grau de entrada) de um vértice (número de edges que têm como destino um vértice).
+ * @details Complexidade: O(1)
+ * @param indegree: grau de entrada
+ */
+void Vertex::setIndegree(unsigned int indegree) {
+    this->indegree = indegree;
 }
 
-void Vertex::setTreeDeg(int treeDeg) {
-    this->treeDeg = treeDeg;
+/**
+ * @brief Obtém o indegree (grau de entrada) de um vértice (número de edges que têm como destino um vértice).
+ * @details Complexidade: O(1)
+ * @return Retoma o indegree de um vértice.
+ */
+unsigned int Vertex::getIndegree() const {
+    return this->indegree;
 }
 
 /********************** Edge  ****************************/
@@ -246,15 +268,6 @@ bool Edge::isSelected() const {
 }
 
 /**
- * @brief Obtém a aresta reversa de uma aresta.
- * @details Complexidade: O(1)
- * @return Retorna a aresta reversa de uma aresta.
- */
-double Edge::getFlow() const {
-    return flow;
-}
-
-/**
  * @brief Define se uma aresta foi selecionada.
  * @details Complexidade: O(1)
  * @param selected: valor booleano que indica se a aresta foi selecionada.
@@ -270,15 +283,6 @@ void Edge::setSelected(bool selected) {
  */
 void Edge::setReverse(Edge *reverse) {
     this->reverse = reverse;
-}
-
-/**
- * @brief Define o fluxo de uma aresta.
- * @details Complexidade: O(1)
- * @param flow: fluxo
- */
-void Edge::setFlow(double flow) {
-    this->flow = flow;
 }
 
 
@@ -437,4 +441,26 @@ inline void deleteMatrix(double **m, int n) {
 Graph::~Graph() {
     deleteMatrix(distMatrix, vertexSet.size());
     deleteMatrix(pathMatrix, vertexSet.size());
+}
+
+/**
+ * @brief Obtém a distância entre dois vértices.
+ * @details Complexidade: O(1)
+ * @param source: vértice de origem (ID)
+ * @param dest: vértice de destino (ID)
+ * @return distância entre vértices
+ */
+double Graph::getDistBetween(int source, int dest) const {
+    Vertex* src = findVertex(source);
+    if (src == nullptr) {
+        return std::numeric_limits<double>::max();
+    }
+
+    for (Edge* edge : src->getAdj()) {
+        if (edge->getDest()->getID() == dest) {
+            return edge->getDistance();
+        }
+    }
+
+    return std::numeric_limits<double>::max();
 }

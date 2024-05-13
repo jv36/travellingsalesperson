@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TSP - Project 2 (DA 2023/24): Código-Fonte de src/Graph.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">TSP - Project 2 (DA 2023/24)
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Localizar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('Graph_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Graph.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Graph_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Created by joaomendes on 03-05-2024.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef TRAVELLINGSALESPERSON_GRAPH_H</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define TRAVELLINGSALESPERSON_GRAPH_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="mutpriorq_8h.html">mutpriorq.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">class </span><a class="code hl_class" href="classEdge.html">Edge</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classVertex.html">   17</a></span><span class="keyword">class </span><a class="code hl_class" href="classVertex.html">Vertex</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_function" href="classVertex.html#a915e0b3cea07f2642999640446974151">Vertex</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">double</span> <a class="code hl_variable" href="classVertex.html#af14d5e6b9b67ec08a51ef90e80fc62e7">longitude</a>, <span class="keywordtype">double</span> <a class="code hl_variable" href="classVertex.html#af733d6c48db17a4409b9f74b22b72c81">latitude</a>); <span class="comment">// Realworld vertex</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classVertex.html#ad4ccd48170a1530ec1db5eb306357a74">operator&lt;</a>(<a class="code hl_class" href="classVertex.html">Vertex</a> &amp; vertex) <span class="keyword">const</span>; <span class="comment">// // required by MutablePriorityQueue</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    std::vector&lt;Edge*&gt; <a class="code hl_function" href="classVertex.html#a9858f2aa388d2bfb49d9df8f4504b5a0">getAdj</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classVertex.html#aa4bd82105b85ee53a917391f4811cd8a">isVisited</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_class" href="classEdge.html">Edge</a>* <a class="code hl_function" href="classVertex.html#a6e120e57da6af94892fae44e05868794">getPath</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classVertex.html#aa36ca926de23a6e7283be42e2930957c">getDist</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    std::vector&lt;Edge*&gt; <a class="code hl_function" href="classVertex.html#a84b20dae22321e5a729606885357b015">getIncoming</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classVertex.html#a15eeabbbb6d517af746ae137c6d5b595">setVisited</a>(<span class="keywordtype">bool</span> <a class="code hl_variable" href="classVertex.html#aaef9f7de91b4b8f1752d391a1aae9c2e">visited</a>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classVertex.html#abe4bc30005eec65e775d0cd51f456460">setPath</a>(<a class="code hl_class" href="classEdge.html">Edge</a> *<a class="code hl_variable" href="classVertex.html#a4e83821f961f6eb63ad210260ba0e1e2">path</a>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classVertex.html#a6939bef79bfe5fe5bf77d9fd1bd70085">setDist</a>(<span class="keywordtype">double</span> <a class="code hl_variable" href="classVertex.html#a11d98611f5101fe7f46785d8b9c53f44">dist</a>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classVertex.html#aeb605d2ba9296a5e40496a9e37557d03">setIndegree</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classVertex.html#a94ae99aae9b1a426feda5ecda70c598b">indegree</a>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_class" href="classEdge.html">Edge</a>* <a class="code hl_function" href="classVertex.html#a6c38817196656fcc394aae867ee62773">addEdge</a>(<a class="code hl_class" href="classVertex.html">Vertex</a> *dest, <span class="keywordtype">double</span> w);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classVertex.html#a37a174a65c97bd548838c5d03961e735">removeEdge</a>(<span class="keywordtype">int</span> in);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classVertex.html#afcde6d707aff7627df7adde8d8b74a89">removeOutgoingEdges</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classVertex.html#af59c1c694521d7806284fec630ac6360">getID</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classVertex.html#af1a2bee6c38f511cbfea082eb7149537">getLongitude</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classVertex.html#a7455a09de51b274867edae2254cef38d">getLatitude</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classVertex.html#a6e8dd99e4d0d0f5083b2fb64743a8953">   40</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classVertex.html#ad7348af9376d4b9ada5ceeca3bd1b2b7">getIndegree</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classMutablePriorityQueue.html">MutablePriorityQueue</a>&lt;<a class="code hl_class" href="classVertex.html">Vertex</a>&gt;;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classVertex.html#a2e69697726190f50c7fc040fb1ddac7a">   44</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classVertex.html#a2e69697726190f50c7fc040fb1ddac7a">id</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classVertex.html#af14d5e6b9b67ec08a51ef90e80fc62e7">   45</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="classVertex.html#af14d5e6b9b67ec08a51ef90e80fc62e7">longitude</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classVertex.html#af733d6c48db17a4409b9f74b22b72c81">   46</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="classVertex.html#af733d6c48db17a4409b9f74b22b72c81">latitude</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classVertex.html#a8e2eb1c5bf923165179ff9d8b4f29349">   47</a></span>    std::vector&lt;Edge*&gt; <a class="code hl_variable" href="classVertex.html#a8e2eb1c5bf923165179ff9d8b4f29349">adj</a>;  <span class="comment">// outgoing edges</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classVertex.html#a38b359fc0c49b5b027178d0fe5aa4f4c">   48</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classVertex.html#a38b359fc0c49b5b027178d0fe5aa4f4c">treeDeg</a> = 0; <span class="comment">// used by Prim</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">// auxiliary fields</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classVertex.html#aaef9f7de91b4b8f1752d391a1aae9c2e">   51</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="classVertex.html#aaef9f7de91b4b8f1752d391a1aae9c2e">visited</a> = <span class="keyword">false</span>; <span class="comment">// used by DFS, BFS, Prim ...</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classVertex.html#a305dc8fcad6e4c7ef2491409ca7ddaa4">   52</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="classVertex.html#a305dc8fcad6e4c7ef2491409ca7ddaa4">processing</a> = <span class="keyword">false</span>; <span class="comment">// used by isDAG (in addition to the visited attribute)</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classVertex.html#a94ae99aae9b1a426feda5ecda70c598b">   53</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classVertex.html#a94ae99aae9b1a426feda5ecda70c598b">indegree</a>; <span class="comment">// used by topsort</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classVertex.html#a11d98611f5101fe7f46785d8b9c53f44">   54</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="classVertex.html#a11d98611f5101fe7f46785d8b9c53f44">dist</a> = 0;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classVertex.html#a4e83821f961f6eb63ad210260ba0e1e2">   55</a></span>    <a class="code hl_class" href="classEdge.html">Edge</a> *<a class="code hl_variable" href="classVertex.html#a4e83821f961f6eb63ad210260ba0e1e2">path</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classVertex.html#a5f53541a932a1c2ac0ed4b838a0af2b5">   57</a></span>    std::vector&lt;Edge*&gt; <a class="code hl_variable" href="classVertex.html#a5f53541a932a1c2ac0ed4b838a0af2b5">incoming</a>; <span class="comment">// incoming edges</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classVertex.html#a78ba760e405ba9f66129b3870065b48f">   59</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classVertex.html#a78ba760e405ba9f66129b3870065b48f">queueIndex</a> = 0;         <span class="comment">// required by MutablePriorityQueue and UFDS</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classVertex.html#ac2a80daa5a6a208173f55d4d161334f1">deleteEdge</a>(<a class="code hl_class" href="classEdge.html">Edge</a> *edge);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>};</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classEdge.html">   65</a></span><span class="keyword">class </span><a class="code hl_class" href="classEdge.html">Edge</a> {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_function" href="classEdge.html#a14f8d707603cf095b40c2941d2dd1c9a">Edge</a>(<a class="code hl_class" href="classVertex.html">Vertex</a> *<a class="code hl_variable" href="classEdge.html#a48f1521d20ead8492fd1d184656862f5">orig</a>, <a class="code hl_class" href="classVertex.html">Vertex</a> *<a class="code hl_variable" href="classEdge.html#a50339c1a85710ca827d4e3865727ffd7">dest</a>, <span class="keywordtype">double</span> <a class="code hl_variable" href="classEdge.html#a697dbb39235e54e2dce0e85d213bc753">distance</a>);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_class" href="classVertex.html">Vertex</a>* <a class="code hl_function" href="classEdge.html#a5cda44e9ba257b03963a1ac301371a59">getDest</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classEdge.html#afd6d96365c7158f369125bf2958ca511">getDistance</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classEdge.html#a52967cf488bb7185a512cd111420215d">isSelected</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_class" href="classVertex.html">Vertex</a>* <a class="code hl_function" href="classEdge.html#a6e8b08e91c0694b40edff0432fb612eb">getOrig</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classEdge.html#a8ab1cf2fe7fd16152d1dba3822853894">setSelected</a>(<span class="keywordtype">bool</span> <a class="code hl_variable" href="classEdge.html#a3af6d278c4ddcb2589e1aa66e52f4efb">selected</a>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classEdge.html#a64881280015bd83702fe3b2c6234b7e5">setReverse</a>(<a class="code hl_class" href="classEdge.html">Edge</a> *<a class="code hl_variable" href="classEdge.html#abcadfaa8985d0d593a124d0fea39130a">reverse</a>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classEdge.html#a50339c1a85710ca827d4e3865727ffd7">   77</a></span>    <a class="code hl_class" href="classVertex.html">Vertex</a>* <a class="code hl_variable" href="classEdge.html#a50339c1a85710ca827d4e3865727ffd7">dest</a>; <span class="comment">// destination vertex</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classEdge.html#a697dbb39235e54e2dce0e85d213bc753">   78</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="classEdge.html#a697dbb39235e54e2dce0e85d213bc753">distance</a>; <span class="comment">// edge weight, can also be used for capacity</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="comment">// auxiliary fields</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classEdge.html#a3af6d278c4ddcb2589e1aa66e52f4efb">   81</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="classEdge.html#a3af6d278c4ddcb2589e1aa66e52f4efb">selected</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="comment">// used for bidirectional edges</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classEdge.html#a48f1521d20ead8492fd1d184656862f5">   84</a></span>    <a class="code hl_class" href="classVertex.html">Vertex</a> *<a class="code hl_variable" href="classEdge.html#a48f1521d20ead8492fd1d184656862f5">orig</a>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="classEdge.html#abcadfaa8985d0d593a124d0fea39130a">   85</a></span>    <a class="code hl_class" href="classEdge.html">Edge</a> *<a class="code hl_variable" href="classEdge.html#abcadfaa8985d0d593a124d0fea39130a">reverse</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classEdge.html#adbe59333b5a49cbb85b39ce1272e6098">   87</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="classEdge.html#adbe59333b5a49cbb85b39ce1272e6098">flow</a>; <span class="comment">// for flow-related problems</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>};</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classGraph.html">   90</a></span><span class="keyword">class </span><a class="code hl_class" href="classGraph.html">Graph</a> {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <a class="code hl_function" href="classGraph.html#a902c5b3eacb66d60752525ab23297a95">~Graph</a>();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment">    * Auxiliary function to find a vertex with a given the content.</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment">    */</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <a class="code hl_class" href="classVertex.html">Vertex</a> *<a class="code hl_function" href="classGraph.html#a80e4dc6dc4d094e7c728015346705863">findVertex</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;in) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment">     *  Adds a vertex with a given content or info (in) to a graph (this).</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment">     *  Returns true if successful, and false if a vertex with that content already exists.</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classGraph.html#a59a5e666d2b7dc025704d7e6bce95c01">addVertex</a>(<a class="code hl_class" href="classVertex.html">Vertex</a>* v);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classGraph.html#ad1d6b5aeb4fd53f6a3b366afd51cb8cc">removeVertex</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;in);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment">     * Adds an edge to a graph (this), given the contents of the source and</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment">     * destination vertices and the edge weight (w).</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment">     * Returns true if successful, and false if the source or destination vertex does not exist.</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classGraph.html#a516f4487d70f4b15e413447afa8c2310">addEdge</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;sourc, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;dest, <span class="keywordtype">double</span> w);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classGraph.html#a764e3181643efb34ff0209ca6e33275b">removeEdge</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;source, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;dest);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classGraph.html#a5d6b6b10ebe49cc0191ab45151cd49e7">addBidirectionalEdge</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;sourc, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;dest, <span class="keywordtype">double</span> w);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    std::vector&lt;Vertex*&gt; <a class="code hl_function" href="classGraph.html#a619ac583094079134074658e29463c0e">getVertexSet</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classGraph.html#a51bcd802bed8dcce5bf066cd02706124">getDistBetween</a>(<span class="keywordtype">int</span> source, <span class="keywordtype">int</span> dest) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classGraph.html#a6eec9bd738a8909119e5b2470ff5f264">  116</a></span>    std::vector&lt;Vertex*&gt; <a class="code hl_variable" href="classGraph.html#a6eec9bd738a8909119e5b2470ff5f264">vertexSet</a>;    <span class="comment">// vertex set</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="classGraph.html#a9e61864da69191c1896a25a708d1a02d">  118</a></span>    <span class="keywordtype">double</span> ** <a class="code hl_variable" href="classGraph.html#a9e61864da69191c1896a25a708d1a02d">distMatrix</a> = <span class="keyword">nullptr</span>;   <span class="comment">// dist matrix for Floyd-Warshall</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="classGraph.html#a3ae09699c3616af3ebfcb1eb045f2b62">  119</a></span>    <span class="keywordtype">int</span> **<a class="code hl_variable" href="classGraph.html#a3ae09699c3616af3ebfcb1eb045f2b62">pathMatrix</a> = <span class="keyword">nullptr</span>;   <span class="comment">// path matrix for Floyd-Warshall</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>};</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">#endif </span><span class="comment">//TRAVELLINGSALESPERSON_GRAPH_H</span></div>
+<div class="ttc" id="aclassEdge_html"><div class="ttname"><a href="classEdge.html">Edge</a></div><div class="ttdef"><b>Definition:</b> <a href="Graph_8h_source.html#l00065">Graph.h:65</a></div></div>
+<div class="ttc" id="aclassEdge_html_a14f8d707603cf095b40c2941d2dd1c9a"><div class="ttname"><a href="classEdge.html#a14f8d707603cf095b40c2941d2dd1c9a">Edge::Edge</a></div><div class="ttdeci">Edge(Vertex *orig, Vertex *dest, double distance)</div><div class="ttdoc">Construtor da classe Edge.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00227">Graph.cpp:227</a></div></div>
+<div class="ttc" id="aclassEdge_html_a3af6d278c4ddcb2589e1aa66e52f4efb"><div class="ttname"><a href="classEdge.html#a3af6d278c4ddcb2589e1aa66e52f4efb">Edge::selected</a></div><div class="ttdeci">bool selected</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8h_source.html#l00081">Graph.h:81</a></div></div>
+<div class="ttc" id="aclassEdge_html_a48f1521d20ead8492fd1d184656862f5"><div class="ttname"><a href="classEdge.html#a48f1521d20ead8492fd1d184656862f5">Edge::orig</a></div><div class="ttdeci">Vertex * orig</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8h_source.html#l00084">Graph.h:84</a></div></div>
+<div class="ttc" id="aclassEdge_html_a50339c1a85710ca827d4e3865727ffd7"><div class="ttname"><a href="classEdge.html#a50339c1a85710ca827d4e3865727ffd7">Edge::dest</a></div><div class="ttdeci">Vertex * dest</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8h_source.html#l00077">Graph.h:77</a></div></div>
+<div class="ttc" id="aclassEdge_html_a52967cf488bb7185a512cd111420215d"><div class="ttname"><a href="classEdge.html#a52967cf488bb7185a512cd111420215d">Edge::isSelected</a></div><div class="ttdeci">bool isSelected() const</div><div class="ttdoc">Obtém o fluxo de uma aresta.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00266">Graph.cpp:266</a></div></div>
+<div class="ttc" id="aclassEdge_html_a5cda44e9ba257b03963a1ac301371a59"><div class="ttname"><a href="classEdge.html#a5cda44e9ba257b03963a1ac301371a59">Edge::getDest</a></div><div class="ttdeci">Vertex * getDest() const</div><div class="ttdoc">Obtém o vértice de destino de uma aresta.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00239">Graph.cpp:239</a></div></div>
+<div class="ttc" id="aclassEdge_html_a64881280015bd83702fe3b2c6234b7e5"><div class="ttname"><a href="classEdge.html#a64881280015bd83702fe3b2c6234b7e5">Edge::setReverse</a></div><div class="ttdeci">void setReverse(Edge *reverse)</div><div class="ttdoc">Define a aresta reversa de uma aresta.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00284">Graph.cpp:284</a></div></div>
+<div class="ttc" id="aclassEdge_html_a697dbb39235e54e2dce0e85d213bc753"><div class="ttname"><a href="classEdge.html#a697dbb39235e54e2dce0e85d213bc753">Edge::distance</a></div><div class="ttdeci">double distance</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8h_source.html#l00078">Graph.h:78</a></div></div>
+<div class="ttc" id="aclassEdge_html_a6e8b08e91c0694b40edff0432fb612eb"><div class="ttname"><a href="classEdge.html#a6e8b08e91c0694b40edff0432fb612eb">Edge::getOrig</a></div><div class="ttdeci">Vertex * getOrig() const</div><div class="ttdoc">Verifica se uma aresta foi selecionada.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00257">Graph.cpp:257</a></div></div>
+<div class="ttc" id="aclassEdge_html_a8ab1cf2fe7fd16152d1dba3822853894"><div class="ttname"><a href="classEdge.html#a8ab1cf2fe7fd16152d1dba3822853894">Edge::setSelected</a></div><div class="ttdeci">void setSelected(bool selected)</div><div class="ttdoc">Define se uma aresta foi selecionada.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00275">Graph.cpp:275</a></div></div>
+<div class="ttc" id="aclassEdge_html_abcadfaa8985d0d593a124d0fea39130a"><div class="ttname"><a href="classEdge.html#abcadfaa8985d0d593a124d0fea39130a">Edge::reverse</a></div><div class="ttdeci">Edge * reverse</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8h_source.html#l00085">Graph.h:85</a></div></div>
+<div class="ttc" id="aclassEdge_html_adbe59333b5a49cbb85b39ce1272e6098"><div class="ttname"><a href="classEdge.html#adbe59333b5a49cbb85b39ce1272e6098">Edge::flow</a></div><div class="ttdeci">double flow</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8h_source.html#l00087">Graph.h:87</a></div></div>
+<div class="ttc" id="aclassEdge_html_afd6d96365c7158f369125bf2958ca511"><div class="ttname"><a href="classEdge.html#afd6d96365c7158f369125bf2958ca511">Edge::getDistance</a></div><div class="ttdeci">double getDistance() const</div><div class="ttdoc">Obtém a distância de uma aresta.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00248">Graph.cpp:248</a></div></div>
+<div class="ttc" id="aclassGraph_html"><div class="ttname"><a href="classGraph.html">Graph</a></div><div class="ttdef"><b>Definition:</b> <a href="Graph_8h_source.html#l00090">Graph.h:90</a></div></div>
+<div class="ttc" id="aclassGraph_html_a3ae09699c3616af3ebfcb1eb045f2b62"><div class="ttname"><a href="classGraph.html#a3ae09699c3616af3ebfcb1eb045f2b62">Graph::pathMatrix</a></div><div class="ttdeci">int ** pathMatrix</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8h_source.html#l00119">Graph.h:119</a></div></div>
+<div class="ttc" id="aclassGraph_html_a516f4487d70f4b15e413447afa8c2310"><div class="ttname"><a href="classGraph.html#a516f4487d70f4b15e413447afa8c2310">Graph::addEdge</a></div><div class="ttdeci">bool addEdge(const int &amp;sourc, const int &amp;dest, double w)</div><div class="ttdoc">Adiciona uma aresta a um grafo (this), dado o conteúdo dos vértices de origem e destino e o peso da a...</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00363">Graph.cpp:363</a></div></div>
+<div class="ttc" id="aclassGraph_html_a51bcd802bed8dcce5bf066cd02706124"><div class="ttname"><a href="classGraph.html#a51bcd802bed8dcce5bf066cd02706124">Graph::getDistBetween</a></div><div class="ttdeci">double getDistBetween(int source, int dest) const</div><div class="ttdoc">Obtém a distância entre dois vértices.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00453">Graph.cpp:453</a></div></div>
+<div class="ttc" id="aclassGraph_html_a59a5e666d2b7dc025704d7e6bce95c01"><div class="ttname"><a href="classGraph.html#a59a5e666d2b7dc025704d7e6bce95c01">Graph::addVertex</a></div><div class="ttdeci">bool addVertex(Vertex *v)</div><div class="ttdoc">Adiciona um vértice com um dado conteúdo (v) a um grafo (this).</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00320">Graph.cpp:320</a></div></div>
+<div class="ttc" id="aclassGraph_html_a5d6b6b10ebe49cc0191ab45151cd49e7"><div class="ttname"><a href="classGraph.html#a5d6b6b10ebe49cc0191ab45151cd49e7">Graph::addBidirectionalEdge</a></div><div class="ttdeci">bool addBidirectionalEdge(const int &amp;sourc, const int &amp;dest, double w)</div><div class="ttdoc">Adiciona uma aresta bidirecional a um grafo (this).</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00398">Graph.cpp:398</a></div></div>
+<div class="ttc" id="aclassGraph_html_a619ac583094079134074658e29463c0e"><div class="ttname"><a href="classGraph.html#a619ac583094079134074658e29463c0e">Graph::getVertexSet</a></div><div class="ttdeci">std::vector&lt; Vertex * &gt; getVertexSet() const</div><div class="ttdoc">Obtém o conjunto de vértices de um grafo.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00297">Graph.cpp:297</a></div></div>
+<div class="ttc" id="aclassGraph_html_a6eec9bd738a8909119e5b2470ff5f264"><div class="ttname"><a href="classGraph.html#a6eec9bd738a8909119e5b2470ff5f264">Graph::vertexSet</a></div><div class="ttdeci">std::vector&lt; Vertex * &gt; vertexSet</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8h_source.html#l00116">Graph.h:116</a></div></div>
+<div class="ttc" id="aclassGraph_html_a764e3181643efb34ff0209ca6e33275b"><div class="ttname"><a href="classGraph.html#a764e3181643efb34ff0209ca6e33275b">Graph::removeEdge</a></div><div class="ttdeci">bool removeEdge(const int &amp;source, const int &amp;dest)</div><div class="ttdoc">Remove uma aresta de um grafo (this).</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00382">Graph.cpp:382</a></div></div>
+<div class="ttc" id="aclassGraph_html_a80e4dc6dc4d094e7c728015346705863"><div class="ttname"><a href="classGraph.html#a80e4dc6dc4d094e7c728015346705863">Graph::findVertex</a></div><div class="ttdeci">Vertex * findVertex(const int &amp;in) const</div><div class="ttdoc">Função auxiliar para encontrar um vértice com um dado conteúdo.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00307">Graph.cpp:307</a></div></div>
+<div class="ttc" id="aclassGraph_html_a902c5b3eacb66d60752525ab23297a95"><div class="ttname"><a href="classGraph.html#a902c5b3eacb66d60752525ab23297a95">Graph::~Graph</a></div><div class="ttdeci">~Graph()</div><div class="ttdoc">Destrutor da classe Graph.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00441">Graph.cpp:441</a></div></div>
+<div class="ttc" id="aclassGraph_html_a9e61864da69191c1896a25a708d1a02d"><div class="ttname"><a href="classGraph.html#a9e61864da69191c1896a25a708d1a02d">Graph::distMatrix</a></div><div class="ttdeci">double ** distMatrix</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8h_source.html#l00118">Graph.h:118</a></div></div>
+<div class="ttc" id="aclassGraph_html_ad1d6b5aeb4fd53f6a3b366afd51cb8cc"><div class="ttname"><a href="classGraph.html#ad1d6b5aeb4fd53f6a3b366afd51cb8cc">Graph::removeVertex</a></div><div class="ttdeci">bool removeVertex(const int &amp;in)</div><div class="ttdoc">Remove um vértice com um dado conteúdo (in) de um grafo (this), e todas as arestas de saída e entrada...</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00334">Graph.cpp:334</a></div></div>
+<div class="ttc" id="aclassMutablePriorityQueue_html"><div class="ttname"><a href="classMutablePriorityQueue.html">MutablePriorityQueue</a></div><div class="ttdef"><b>Definition:</b> <a href="mutpriorq_8h_source.html#l00011">mutpriorq.h:11</a></div></div>
+<div class="ttc" id="aclassVertex_html"><div class="ttname"><a href="classVertex.html">Vertex</a></div><div class="ttdef"><b>Definition:</b> <a href="Graph_8h_source.html#l00017">Graph.h:17</a></div></div>
+<div class="ttc" id="aclassVertex_html_a11d98611f5101fe7f46785d8b9c53f44"><div class="ttname"><a href="classVertex.html#a11d98611f5101fe7f46785d8b9c53f44">Vertex::dist</a></div><div class="ttdeci">double dist</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8h_source.html#l00054">Graph.h:54</a></div></div>
+<div class="ttc" id="aclassVertex_html_a15eeabbbb6d517af746ae137c6d5b595"><div class="ttname"><a href="classVertex.html#a15eeabbbb6d517af746ae137c6d5b595">Vertex::setVisited</a></div><div class="ttdeci">void setVisited(bool visited)</div><div class="ttdoc">Define se um vértice foi visitado.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00095">Graph.cpp:95</a></div></div>
+<div class="ttc" id="aclassVertex_html_a2e69697726190f50c7fc040fb1ddac7a"><div class="ttname"><a href="classVertex.html#a2e69697726190f50c7fc040fb1ddac7a">Vertex::id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8h_source.html#l00044">Graph.h:44</a></div></div>
+<div class="ttc" id="aclassVertex_html_a305dc8fcad6e4c7ef2491409ca7ddaa4"><div class="ttname"><a href="classVertex.html#a305dc8fcad6e4c7ef2491409ca7ddaa4">Vertex::processing</a></div><div class="ttdeci">bool processing</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8h_source.html#l00052">Graph.h:52</a></div></div>
+<div class="ttc" id="aclassVertex_html_a37a174a65c97bd548838c5d03961e735"><div class="ttname"><a href="classVertex.html#a37a174a65c97bd548838c5d03961e735">Vertex::removeEdge</a></div><div class="ttdeci">bool removeEdge(int in)</div><div class="ttdoc">Função auxiliar para remover uma aresta de saída (com um destino (d) dado) de um vértice (this).</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00014">Graph.cpp:14</a></div></div>
+<div class="ttc" id="aclassVertex_html_a38b359fc0c49b5b027178d0fe5aa4f4c"><div class="ttname"><a href="classVertex.html#a38b359fc0c49b5b027178d0fe5aa4f4c">Vertex::treeDeg</a></div><div class="ttdeci">int treeDeg</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8h_source.html#l00048">Graph.h:48</a></div></div>
+<div class="ttc" id="aclassVertex_html_a4e83821f961f6eb63ad210260ba0e1e2"><div class="ttname"><a href="classVertex.html#a4e83821f961f6eb63ad210260ba0e1e2">Vertex::path</a></div><div class="ttdeci">Edge * path</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8h_source.html#l00055">Graph.h:55</a></div></div>
+<div class="ttc" id="aclassVertex_html_a5f53541a932a1c2ac0ed4b838a0af2b5"><div class="ttname"><a href="classVertex.html#a5f53541a932a1c2ac0ed4b838a0af2b5">Vertex::incoming</a></div><div class="ttdeci">std::vector&lt; Edge * &gt; incoming</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8h_source.html#l00057">Graph.h:57</a></div></div>
+<div class="ttc" id="aclassVertex_html_a6939bef79bfe5fe5bf77d9fd1bd70085"><div class="ttname"><a href="classVertex.html#a6939bef79bfe5fe5bf77d9fd1bd70085">Vertex::setDist</a></div><div class="ttdeci">void setDist(double dist)</div><div class="ttdoc">Define a distância de um vértice.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00197">Graph.cpp:197</a></div></div>
+<div class="ttc" id="aclassVertex_html_a6c38817196656fcc394aae867ee62773"><div class="ttname"><a href="classVertex.html#a6c38817196656fcc394aae867ee62773">Vertex::addEdge</a></div><div class="ttdeci">Edge * addEdge(Vertex *dest, double w)</div><div class="ttdoc">Adiciona uma aresta a um vértice.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00136">Graph.cpp:136</a></div></div>
+<div class="ttc" id="aclassVertex_html_a6e120e57da6af94892fae44e05868794"><div class="ttname"><a href="classVertex.html#a6e120e57da6af94892fae44e05868794">Vertex::getPath</a></div><div class="ttdeci">Edge * getPath() const</div><div class="ttdoc">Obtém a aresta que liga um vértice ao seu path.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00077">Graph.cpp:77</a></div></div>
+<div class="ttc" id="aclassVertex_html_a7455a09de51b274867edae2254cef38d"><div class="ttname"><a href="classVertex.html#a7455a09de51b274867edae2254cef38d">Vertex::getLatitude</a></div><div class="ttdeci">double getLatitude() const</div><div class="ttdoc">Obtém a latitude de um vértice.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00179">Graph.cpp:179</a></div></div>
+<div class="ttc" id="aclassVertex_html_a78ba760e405ba9f66129b3870065b48f"><div class="ttname"><a href="classVertex.html#a78ba760e405ba9f66129b3870065b48f">Vertex::queueIndex</a></div><div class="ttdeci">int queueIndex</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8h_source.html#l00059">Graph.h:59</a></div></div>
+<div class="ttc" id="aclassVertex_html_a84b20dae22321e5a729606885357b015"><div class="ttname"><a href="classVertex.html#a84b20dae22321e5a729606885357b015">Vertex::getIncoming</a></div><div class="ttdeci">std::vector&lt; Edge * &gt; getIncoming() const</div><div class="ttdoc">Obtém a lista de arestas que entram num vértice.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00086">Graph.cpp:86</a></div></div>
+<div class="ttc" id="aclassVertex_html_a8e2eb1c5bf923165179ff9d8b4f29349"><div class="ttname"><a href="classVertex.html#a8e2eb1c5bf923165179ff9d8b4f29349">Vertex::adj</a></div><div class="ttdeci">std::vector&lt; Edge * &gt; adj</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8h_source.html#l00047">Graph.h:47</a></div></div>
+<div class="ttc" id="aclassVertex_html_a915e0b3cea07f2642999640446974151"><div class="ttname"><a href="classVertex.html#a915e0b3cea07f2642999640446974151">Vertex::Vertex</a></div><div class="ttdeci">Vertex(int id, double longitude, double latitude)</div><div class="ttdoc">Construtor da classe Vertex.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00149">Graph.cpp:149</a></div></div>
+<div class="ttc" id="aclassVertex_html_a94ae99aae9b1a426feda5ecda70c598b"><div class="ttname"><a href="classVertex.html#a94ae99aae9b1a426feda5ecda70c598b">Vertex::indegree</a></div><div class="ttdeci">unsigned int indegree</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8h_source.html#l00053">Graph.h:53</a></div></div>
+<div class="ttc" id="aclassVertex_html_a9858f2aa388d2bfb49d9df8f4504b5a0"><div class="ttname"><a href="classVertex.html#a9858f2aa388d2bfb49d9df8f4504b5a0">Vertex::getAdj</a></div><div class="ttdeci">std::vector&lt; Edge * &gt; getAdj() const</div><div class="ttdoc">Obtém a lista de arestas adjacentes a um vértice.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00059">Graph.cpp:59</a></div></div>
+<div class="ttc" id="aclassVertex_html_aa36ca926de23a6e7283be42e2930957c"><div class="ttname"><a href="classVertex.html#aa36ca926de23a6e7283be42e2930957c">Vertex::getDist</a></div><div class="ttdeci">double getDist() const</div><div class="ttdoc">Obtém a distância de um vértice.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00188">Graph.cpp:188</a></div></div>
+<div class="ttc" id="aclassVertex_html_aa4bd82105b85ee53a917391f4811cd8a"><div class="ttname"><a href="classVertex.html#aa4bd82105b85ee53a917391f4811cd8a">Vertex::isVisited</a></div><div class="ttdeci">bool isVisited() const</div><div class="ttdoc">Verifica se um vértice foi visitado.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00068">Graph.cpp:68</a></div></div>
+<div class="ttc" id="aclassVertex_html_aaef9f7de91b4b8f1752d391a1aae9c2e"><div class="ttname"><a href="classVertex.html#aaef9f7de91b4b8f1752d391a1aae9c2e">Vertex::visited</a></div><div class="ttdeci">bool visited</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8h_source.html#l00051">Graph.h:51</a></div></div>
+<div class="ttc" id="aclassVertex_html_abe4bc30005eec65e775d0cd51f456460"><div class="ttname"><a href="classVertex.html#abe4bc30005eec65e775d0cd51f456460">Vertex::setPath</a></div><div class="ttdeci">void setPath(Edge *path)</div><div class="ttdoc">Define a aresta que liga um vértice ao seu path.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00104">Graph.cpp:104</a></div></div>
+<div class="ttc" id="aclassVertex_html_ac2a80daa5a6a208173f55d4d161334f1"><div class="ttname"><a href="classVertex.html#ac2a80daa5a6a208173f55d4d161334f1">Vertex::deleteEdge</a></div><div class="ttdeci">void deleteEdge(Edge *edge)</div><div class="ttdoc">Remove uma aresta de um vértice.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00114">Graph.cpp:114</a></div></div>
+<div class="ttc" id="aclassVertex_html_ad4ccd48170a1530ec1db5eb306357a74"><div class="ttname"><a href="classVertex.html#ad4ccd48170a1530ec1db5eb306357a74">Vertex::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(Vertex &amp;vertex) const</div><div class="ttdoc">Operador para comparar dois vértices, através do dist.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00050">Graph.cpp:50</a></div></div>
+<div class="ttc" id="aclassVertex_html_ad7348af9376d4b9ada5ceeca3bd1b2b7"><div class="ttname"><a href="classVertex.html#ad7348af9376d4b9ada5ceeca3bd1b2b7">Vertex::getIndegree</a></div><div class="ttdeci">unsigned int getIndegree() const</div><div class="ttdoc">Obtém o indegree (grau de entrada) de um vértice (número de edges que têm como destino um vértice).</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00215">Graph.cpp:215</a></div></div>
+<div class="ttc" id="aclassVertex_html_aeb605d2ba9296a5e40496a9e37557d03"><div class="ttname"><a href="classVertex.html#aeb605d2ba9296a5e40496a9e37557d03">Vertex::setIndegree</a></div><div class="ttdeci">void setIndegree(unsigned int indegree)</div><div class="ttdoc">Define o indegree (grau de entrada) de um vértice (número de edges que têm como destino um vértice).</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00206">Graph.cpp:206</a></div></div>
+<div class="ttc" id="aclassVertex_html_af14d5e6b9b67ec08a51ef90e80fc62e7"><div class="ttname"><a href="classVertex.html#af14d5e6b9b67ec08a51ef90e80fc62e7">Vertex::longitude</a></div><div class="ttdeci">double longitude</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8h_source.html#l00045">Graph.h:45</a></div></div>
+<div class="ttc" id="aclassVertex_html_af1a2bee6c38f511cbfea082eb7149537"><div class="ttname"><a href="classVertex.html#af1a2bee6c38f511cbfea082eb7149537">Vertex::getLongitude</a></div><div class="ttdeci">double getLongitude() const</div><div class="ttdoc">Obtém a longitude de um vértice.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00170">Graph.cpp:170</a></div></div>
+<div class="ttc" id="aclassVertex_html_af59c1c694521d7806284fec630ac6360"><div class="ttname"><a href="classVertex.html#af59c1c694521d7806284fec630ac6360">Vertex::getID</a></div><div class="ttdeci">int getID() const</div><div class="ttdoc">Obtém o código (ID) de um vértice.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00161">Graph.cpp:161</a></div></div>
+<div class="ttc" id="aclassVertex_html_af733d6c48db17a4409b9f74b22b72c81"><div class="ttname"><a href="classVertex.html#af733d6c48db17a4409b9f74b22b72c81">Vertex::latitude</a></div><div class="ttdeci">double latitude</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8h_source.html#l00046">Graph.h:46</a></div></div>
+<div class="ttc" id="aclassVertex_html_afcde6d707aff7627df7adde8d8b74a89"><div class="ttname"><a href="classVertex.html#afcde6d707aff7627df7adde8d8b74a89">Vertex::removeOutgoingEdges</a></div><div class="ttdeci">void removeOutgoingEdges()</div><div class="ttdoc">Remove todos os outgoing edges de um vértice.t.</div><div class="ttdef"><b>Definition:</b> <a href="Graph_8cpp_source.html#l00036">Graph.cpp:36</a></div></div>
+<div class="ttc" id="amutpriorq_8h_html"><div class="ttname"><a href="mutpriorq_8h.html">mutpriorq.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="Graph_8h.html">Graph.h</a></li>
+    <li class="footer">Gerado em Segunda, 13 de Maio de 2024 16:01:26 para TSP - Project 2 (DA 2023/24) por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

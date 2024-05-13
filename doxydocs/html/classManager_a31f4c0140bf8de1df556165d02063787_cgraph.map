@@ -1,0 +1,6 @@
+<map id="Manager::backtracking" name="Manager::backtracking">
+<area shape="rect" id="node1" title="Função que implementa o backtracking para encontrar o caminho mais curto num grafo." alt="" coords="5,56,176,83"/>
+<area shape="rect" id="node2" href="$classVertex.html#a9858f2aa388d2bfb49d9df8f4504b5a0" title="Obtém a lista de arestas adjacentes a um vértice." alt="" coords="243,5,358,32"/>
+<area shape="rect" id="node3" href="$classVertex.html#af59c1c694521d7806284fec630ac6360" title="Obtém o código (ID) de um vértice." alt="" coords="247,56,354,83"/>
+<area shape="rect" id="node4" href="$classGraph.html#a619ac583094079134074658e29463c0e" title="Obtém o conjunto de vértices de um grafo." alt="" coords="224,107,377,133"/>
+</map>

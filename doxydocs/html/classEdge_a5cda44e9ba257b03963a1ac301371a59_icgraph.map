@@ -1,0 +1,7 @@
+<map id="Edge::getDest" name="Edge::getDest">
+<area shape="rect" id="node1" title="Obtém o vértice de destino de uma aresta." alt="" coords="665,31,779,57"/>
+<area shape="rect" id="node2" href="$classVertex.html#ac2a80daa5a6a208173f55d4d161334f1" title="Remove uma aresta de um vértice." alt="" coords="472,56,617,83"/>
+<area shape="rect" id="node3" href="$classVertex.html#a37a174a65c97bd548838c5d03961e735" title="Função auxiliar para remover uma aresta de saída (com um destino (d) dado) de um vértice (this)." alt="" coords="237,5,391,32"/>
+<area shape="rect" id="node5" href="$classVertex.html#afcde6d707aff7627df7adde8d8b74a89" title="Remove todos os outgoing edges de um vértice.t." alt="" coords="204,56,424,83"/>
+<area shape="rect" id="node4" href="$classGraph.html#a764e3181643efb34ff0209ca6e33275b" title="Remove uma aresta de um grafo (this)." alt="" coords="5,5,156,32"/>
+</map>

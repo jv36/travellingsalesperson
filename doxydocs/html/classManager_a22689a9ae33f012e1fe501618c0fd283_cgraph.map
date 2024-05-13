@@ -1,0 +1,4 @@
+<map id="Manager::haversine" name="Manager::haversine">
+<area shape="rect" id="node1" title="Calcula a distância entre dois pontos na Terra, utilizando a fórmula de Haversine." alt="" coords="5,13,156,39"/>
+<area shape="rect" id="node2" href="$classManager.html#a8e2dcb9f47e0defa878c625ba35da90c" title="Converte coordenadas de graus para radianos." alt="" coords="204,5,360,47"/>
+</map>

@@ -12,6 +12,7 @@ class Menu {
 public:
     int main();
     int mainMenu();
+    int mainMenuToy();
     int toySelector();
     int realWorldSelector();
     int extraFullyConnectedSelector();

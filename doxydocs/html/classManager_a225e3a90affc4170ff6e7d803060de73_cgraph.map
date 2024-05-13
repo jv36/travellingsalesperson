@@ -1,0 +1,17 @@
+<map id="Manager::triangular" name="Manager::triangular">
+<area shape="rect" id="node1" title="Função que implementa o algoritmo triangular approximation para encontrar um caminho aproximado num g..." alt="" coords="5,115,156,141"/>
+<area shape="rect" id="node2" href="$classGraph.html#a80e4dc6dc4d094e7c728015346705863" title="Função auxiliar para encontrar um vértice com um dado conteúdo." alt="" coords="238,5,373,32"/>
+<area shape="rect" id="node3" href="$classVertex.html#a9858f2aa388d2bfb49d9df8f4504b5a0" title="Obtém a lista de arestas adjacentes a um vértice." alt="" coords="248,56,363,83"/>
+<area shape="rect" id="node4" href="$classManager.html#ac029b0012cf6fa7a3796c75af9f1917d" title="Função que calcula a distância entre dois vértices, utilizando a fórmula de Haversine." alt="" coords="204,107,407,149"/>
+<area shape="rect" id="node9" href="$classManager.html#a5430044353f0196006c164c1aaedcf54" title="Função que implementa o algoritmo Prim para encontrar uma MST de um grafo." alt="" coords="247,239,364,265"/>
+<area shape="rect" id="node15" href="$classVertex.html#a15eeabbbb6d517af746ae137c6d5b595" title="Define se um vértice foi visitado." alt="" coords="237,289,374,316"/>
+<area shape="rect" id="node5" href="$classVertex.html#a7455a09de51b274867edae2254cef38d" title="Obtém a latitude de um vértice." alt="" coords="463,13,610,40"/>
+<area shape="rect" id="node6" href="$classVertex.html#af1a2bee6c38f511cbfea082eb7149537" title="Obtém a longitude de um vértice." alt="" coords="458,64,615,91"/>
+<area shape="rect" id="node7" href="$classManager.html#a22689a9ae33f012e1fe501618c0fd283" title="Calcula a distância entre dois pontos na Terra, utilizando a fórmula de Haversine." alt="" coords="461,115,612,141"/>
+<area shape="rect" id="node8" href="$classManager.html#a8e2dcb9f47e0defa878c625ba35da90c" title="Converte coordenadas de graus para radianos." alt="" coords="667,107,823,149"/>
+<area shape="rect" id="node10" href="$classMutablePriorityQueue.html#a0878839cc1d2dba2b8ab2e589ecc6405" title=" " alt="" coords="455,166,619,207"/>
+<area shape="rect" id="node11" href="$classMutablePriorityQueue.html#a2edbb1f4a6fa3ff735700dfcebebe8d4" title=" " alt="" coords="455,231,619,273"/>
+<area shape="rect" id="node12" href="$classMutablePriorityQueue.html#a3880874d7364279ac0d6d31302b28853" title=" " alt="" coords="455,297,619,338"/>
+<area shape="rect" id="node13" href="$classGraph.html#a619ac583094079134074658e29463c0e" title="Obtém o conjunto de vértices de um grafo." alt="" coords="460,363,613,389"/>
+<area shape="rect" id="node14" href="$classMutablePriorityQueue.html#a058fc182052af82e10cc3719e448b62d" title=" " alt="" coords="455,414,619,455"/>
+</map>

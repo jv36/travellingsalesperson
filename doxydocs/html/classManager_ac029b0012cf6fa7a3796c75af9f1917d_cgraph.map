@@ -1,0 +1,7 @@
+<map id="Manager::getDistanceCoordHaversine" name="Manager::getDistanceCoordHaversine">
+<area shape="rect" id="node1" title="Função que calcula a distância entre dois vértices, utilizando a fórmula de Haversine." alt="" coords="5,49,208,90"/>
+<area shape="rect" id="node2" href="$classVertex.html#a7455a09de51b274867edae2254cef38d" title="Obtém a latitude de um vértice." alt="" coords="261,5,408,32"/>
+<area shape="rect" id="node3" href="$classVertex.html#af1a2bee6c38f511cbfea082eb7149537" title="Obtém a longitude de um vértice." alt="" coords="256,56,413,83"/>
+<area shape="rect" id="node4" href="$classManager.html#a22689a9ae33f012e1fe501618c0fd283" title="Calcula a distância entre dois pontos na Terra, utilizando a fórmula de Haversine." alt="" coords="259,107,410,133"/>
+<area shape="rect" id="node5" href="$classManager.html#a8e2dcb9f47e0defa878c625ba35da90c" title="Converte coordenadas de graus para radianos." alt="" coords="461,99,617,141"/>
+</map>

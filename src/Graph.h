@@ -29,6 +29,7 @@ public:
     void setVisited(bool visited);
     void setPath(Edge *path);
     void setDist(double dist);
+    void setIndegree(unsigned int indegree);
     Edge* addEdge(Vertex *dest, double w);
     bool removeEdge(int in);
     void removeOutgoingEdges();
@@ -36,8 +37,7 @@ public:
     int getID() const;
     double getLongitude() const;
     double getLatitude() const;
-    int getTreeDeg() const;
-    void setTreeDeg(int treeDeg);
+    unsigned int getIndegree() const;
     friend class MutablePriorityQueue<Vertex>;
 
 protected:
@@ -70,11 +70,9 @@ public:
     double getDistance() const;
     bool isSelected() const;
     Vertex* getOrig() const;
-    double getFlow() const;
 
     void setSelected(bool selected);
     void setReverse(Edge *reverse);
-    void setFlow(double flow);
 protected:
     Vertex* dest; // destination vertex
     double distance; // edge weight, can also be used for capacity
@@ -112,6 +110,8 @@ public:
     bool removeEdge(const int &source, const int &dest);
     bool addBidirectionalEdge(const int &sourc, const int &dest, double w);
     std::vector<Vertex*> getVertexSet() const;
+
+    double getDistBetween(int source, int dest) const;
 protected:
     std::vector<Vertex*> vertexSet;    // vertex set
 

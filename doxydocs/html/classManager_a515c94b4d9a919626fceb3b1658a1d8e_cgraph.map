@@ -1,0 +1,7 @@
+<map id="Manager::createToyGraphs" name="Manager::createToyGraphs">
+<area shape="rect" id="node1" title="Faz parse aos vértices dos grafos do tipo Toy Graph." alt="" coords="5,56,201,83"/>
+<area shape="rect" id="node2" href="$classGraph.html#a516f4487d70f4b15e413447afa8c2310" title="Adiciona uma aresta a um grafo (this), dado o conteúdo dos vértices de origem e destino e o peso da a..." alt="" coords="254,5,379,32"/>
+<area shape="rect" id="node3" href="$classGraph.html#a80e4dc6dc4d094e7c728015346705863" title="Função auxiliar para encontrar um vértice com um dado conteúdo." alt="" coords="432,56,567,83"/>
+<area shape="rect" id="node4" href="$classGraph.html#a59a5e666d2b7dc025704d7e6bce95c01" title="Adiciona um vértice com um dado conteúdo (v) a um grafo (this)." alt="" coords="249,107,384,133"/>
+<area shape="rect" id="node5" href="$classVertex.html#af59c1c694521d7806284fec630ac6360" title="Obtém o código (ID) de um vértice." alt="" coords="446,107,553,133"/>
+</map>

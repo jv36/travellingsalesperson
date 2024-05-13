@@ -1,0 +1,44 @@
+<map id="Menu::mainMenuToy" name="Menu::mainMenuToy">
+<area shape="rect" id="node1" title="Menu principal. Permite ao utilizador escolher a operação a realizar." alt="" coords="5,703,163,729"/>
+<area shape="rect" id="node2" href="$classManager.html#ac6d6ef3433df5093a9e67feb13bdd3f1" title="Função que chama a função de backtracking para encontrar o caminho mais curto num grafo." alt="" coords="1063,745,1275,772"/>
+<area shape="rect" id="node8" href="$classManager.html#aa8988d9ef0d48aa0cfb72c83a4fa326b" title="Função que implementa o algoritmo de Christofides para encontrar um caminho aproximado num grafo." alt="" coords="852,448,1015,475"/>
+<area shape="rect" id="node26" href="$classManager.html#af3a33c9de2ed0ca0bb028a2f4149b97a" title="Imprime o número de vértices e arestas de um grafo." alt="" coords="865,397,1001,424"/>
+<area shape="rect" id="node27" href="$classMenu.html#a117fbfc3ae88c68edda0b4d401c4d67d" title="Menu inicial. Permite ao utilizador escolher o tipo de dataset a utilizar." alt="" coords="211,660,309,687"/>
+<area shape="rect" id="node32" href="$classManager.html#a225e3a90affc4170ff6e7d803060de73" title="Função que implementa o algoritmo triangular approximation para encontrar um caminho aproximado num g..." alt="" coords="1094,921,1245,948"/>
+<area shape="rect" id="node3" href="$classManager.html#a31f4c0140bf8de1df556165d02063787" title="Função que implementa o backtracking para encontrar o caminho mais curto num grafo." alt="" coords="1342,668,1513,695"/>
+<area shape="rect" id="node7" href="$classGraph.html#a80e4dc6dc4d094e7c728015346705863" title="Função auxiliar para encontrar um vértice com um dado conteúdo." alt="" coords="1593,693,1728,720"/>
+<area shape="rect" id="node4" href="$classVertex.html#a9858f2aa388d2bfb49d9df8f4504b5a0" title="Obtém a lista de arestas adjacentes a um vértice." alt="" coords="1603,744,1718,771"/>
+<area shape="rect" id="node5" href="$classVertex.html#af59c1c694521d7806284fec630ac6360" title="Obtém o código (ID) de um vértice." alt="" coords="1607,593,1714,620"/>
+<area shape="rect" id="node6" href="$classGraph.html#a619ac583094079134074658e29463c0e" title="Obtém o conjunto de vértices de um grafo." alt="" coords="1584,209,1737,236"/>
+<area shape="rect" id="node9" href="$classManager.html#a5420cad739f93d82ab6e06f36c870764" title="Função que combina a MST e o MWM num grafo." alt="" coords="1065,340,1273,367"/>
+<area shape="rect" id="node11" href="$classManager.html#ac2e935c96fc2c321b225a78ce1807a3c" title="Função que encontra o circuito euleriano num grafo." alt="" coords="1334,188,1521,215"/>
+<area shape="rect" id="node12" href="$classManager.html#a7262179df06f129c8c36a0a06c18e6c8" title="Função que encontra o circuito hamiltoniano num grafo." alt="" coords="1063,441,1276,468"/>
+<area shape="rect" id="node13" href="$classManager.html#ae0fd1124e1177a18ecafbff73f5519c8" title="Função que encontra o MWM (Minimum Weight Matching) num grafo." alt="" coords="1095,644,1243,671"/>
+<area shape="rect" id="node17" href="$classManager.html#ad5e8470f3c6eda3cad3abf0f6e2f4359" title="Função que encontra os vértices com grau ímpar num grafo." alt="" coords="1077,87,1261,113"/>
+<area shape="rect" id="node18" href="$classEdge.html#afd6d96365c7158f369125bf2958ca511" title="Obtém a distância de uma aresta." alt="" coords="1099,492,1239,519"/>
+<area shape="rect" id="node19" href="$classManager.html#a5fb41399204825eb35a0b6c7b87d077c" title="Função que implementa Prim para encontrar a MST de um grafo." alt="" coords="1112,391,1227,417"/>
+<area shape="rect" id="node10" href="$classGraph.html#a5d6b6b10ebe49cc0191ab45151cd49e7" title="Adiciona uma aresta bidirecional a um grafo (this)." alt="" coords="1324,441,1531,468"/>
+<area shape="rect" id="node14" href="$classGraph.html#a516f4487d70f4b15e413447afa8c2310" title="Adiciona uma aresta a um grafo (this), dado o conteúdo dos vértices de origem e destino e o peso da a..." alt="" coords="1365,769,1490,796"/>
+<area shape="rect" id="node15" href="$classGraph.html#a59a5e666d2b7dc025704d7e6bce95c01" title="Adiciona um vértice com um dado conteúdo (v) a um grafo (this)." alt="" coords="1360,593,1495,620"/>
+<area shape="rect" id="node16" href="$classGraph.html#a51bcd802bed8dcce5bf066cd02706124" title="Obtém a distância entre dois vértices." alt="" coords="1341,719,1514,745"/>
+<area shape="rect" id="node20" href="$classManager.html#a0c79c6cde5e5dbe53a5a1d0ebb599030" title="Função que implementa o algoritmo Prim para encontrar uma MST de um grafo." alt="" coords="1331,391,1523,417"/>
+<area shape="rect" id="node21" href="$classMutablePriorityQueue.html#a0878839cc1d2dba2b8ab2e589ecc6405" title=" " alt="" coords="1579,457,1743,498"/>
+<area shape="rect" id="node22" href="$classMutablePriorityQueue.html#a2edbb1f4a6fa3ff735700dfcebebe8d4" title=" " alt="" coords="1579,261,1743,302"/>
+<area shape="rect" id="node23" href="$classMutablePriorityQueue.html#a3880874d7364279ac0d6d31302b28853" title=" " alt="" coords="1579,326,1743,367"/>
+<area shape="rect" id="node24" href="$classMutablePriorityQueue.html#a058fc182052af82e10cc3719e448b62d" title=" " alt="" coords="1579,391,1743,433"/>
+<area shape="rect" id="node25" href="$classVertex.html#a6939bef79bfe5fe5bf77d9fd1bd70085" title="Define a distância de um vértice." alt="" coords="1601,523,1720,549"/>
+<area shape="rect" id="node28" href="$classMenu.html#a435b9fa4677e757df4858e3ed1ac8575" title="Permite ao utilizador escolher o tipo de extra&#45;fully&#45;connected graph a utilizar." alt="" coords="357,653,557,694"/>
+<area shape="rect" id="node40" href="$classMenu.html#a7477a8d66d749c6adb5d008c756263da" title="Permite ao utilizador escolher o tipo de real&#45;world graph a utilizar." alt="" coords="367,601,548,628"/>
+<area shape="rect" id="node41" href="$classMenu.html#afdf71c6eb4539655c2235bdc4edc302e" title="Permite ao utilizador escolher o tipo de toy&#45;graph a utilizar." alt="" coords="387,796,527,823"/>
+<area shape="rect" id="node29" href="$classManager.html#a9339a8a48e2bf43d2cc419b39f9c92d8" title="Faz parse às arestas dos grafos do tipo Real World." alt="" coords="607,659,803,701"/>
+<area shape="rect" id="node30" href="$classManager.html#ad19012374d3d23a5c17c739ad1c22c74" title="Faz parse aos vértices dos grafos do tipo Real World." alt="" coords="605,594,804,635"/>
+<area shape="rect" id="node31" href="$classMenu.html#af2479c56ab20abe25b90ad64fc092426" title="Menu principal. Permite ao utilizador escolher a operação a realizar." alt="" coords="637,543,772,569"/>
+<area shape="rect" id="node33" href="$classManager.html#ac029b0012cf6fa7a3796c75af9f1917d" title="Função que calcula a distância entre dois vértices, utilizando a fórmula de Haversine." alt="" coords="1326,1074,1529,1115"/>
+<area shape="rect" id="node38" href="$classManager.html#a5430044353f0196006c164c1aaedcf54" title="Função que implementa o algoritmo Prim para encontrar uma MST de um grafo." alt="" coords="1369,340,1486,367"/>
+<area shape="rect" id="node39" href="$classVertex.html#a15eeabbbb6d517af746ae137c6d5b595" title="Define se um vértice foi visitado." alt="" coords="1359,972,1496,999"/>
+<area shape="rect" id="node34" href="$classVertex.html#a7455a09de51b274867edae2254cef38d" title="Obtém a latitude de um vértice." alt="" coords="1587,1081,1734,1108"/>
+<area shape="rect" id="node35" href="$classVertex.html#af1a2bee6c38f511cbfea082eb7149537" title="Obtém a longitude de um vértice." alt="" coords="1582,1132,1739,1159"/>
+<area shape="rect" id="node36" href="$classManager.html#a22689a9ae33f012e1fe501618c0fd283" title="Calcula a distância entre dois pontos na Terra, utilizando a fórmula de Haversine." alt="" coords="1585,1031,1736,1057"/>
+<area shape="rect" id="node37" href="$classManager.html#a8e2dcb9f47e0defa878c625ba35da90c" title="Converte coordenadas de graus para radianos." alt="" coords="1791,1023,1947,1065"/>
+<area shape="rect" id="node42" href="$classManager.html#a515c94b4d9a919626fceb3b1658a1d8e" title="Faz parse aos vértices dos grafos do tipo Toy Graph." alt="" coords="1071,796,1267,823"/>
+</map>

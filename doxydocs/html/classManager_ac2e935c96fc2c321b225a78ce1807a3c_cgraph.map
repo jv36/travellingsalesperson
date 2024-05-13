@@ -1,0 +1,4 @@
+<map id="Manager::findEulerCircuit" name="Manager::findEulerCircuit">
+<area shape="rect" id="node1" title="Função que encontra o circuito euleriano num grafo." alt="" coords="5,5,192,32"/>
+<area shape="rect" id="node2" href="$classGraph.html#a619ac583094079134074658e29463c0e" title="Obtém o conjunto de vértices de um grafo." alt="" coords="240,5,393,32"/>
+</map>

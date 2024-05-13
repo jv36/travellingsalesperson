@@ -1,0 +1,5 @@
+<map id="Graph::getDistBetween" name="Graph::getDistBetween">
+<area shape="rect" id="node1" title="Obtém a distância entre dois vértices." alt="" coords="5,31,179,57"/>
+<area shape="rect" id="node2" href="$classGraph.html#a80e4dc6dc4d094e7c728015346705863" title="Função auxiliar para encontrar um vértice com um dado conteúdo." alt="" coords="227,5,361,32"/>
+<area shape="rect" id="node3" href="$classVertex.html#a9858f2aa388d2bfb49d9df8f4504b5a0" title="Obtém a lista de arestas adjacentes a um vértice." alt="" coords="237,56,351,83"/>
+</map>

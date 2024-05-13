@@ -1,0 +1,13 @@
+<map id="Graph::addEdge" name="Graph::addEdge">
+<area shape="rect" id="node1" title="Adiciona uma aresta a um grafo (this), dado o conteúdo dos vértices de origem e destino e o peso da a..." alt="" coords="1143,193,1268,220"/>
+<area shape="rect" id="node2" href="$classManager.html#a9339a8a48e2bf43d2cc419b39f9c92d8" title="Faz parse às arestas dos grafos do tipo Real World." alt="" coords="899,98,1095,139"/>
+<area shape="rect" id="node9" href="$classManager.html#a515c94b4d9a919626fceb3b1658a1d8e" title="Faz parse aos vértices dos grafos do tipo Toy Graph." alt="" coords="899,244,1095,271"/>
+<area shape="rect" id="node10" href="$classManager.html#ae0fd1124e1177a18ecafbff73f5519c8" title="Função que encontra o MWM (Minimum Weight Matching) num grafo." alt="" coords="923,193,1071,220"/>
+<area shape="rect" id="node3" href="$classMenu.html#a435b9fa4677e757df4858e3ed1ac8575" title="Permite ao utilizador escolher o tipo de extra&#45;fully&#45;connected graph a utilizar." alt="" coords="651,98,851,139"/>
+<area shape="rect" id="node6" href="$classMenu.html#a7477a8d66d749c6adb5d008c756263da" title="Permite ao utilizador escolher o tipo de real&#45;world graph a utilizar." alt="" coords="5,5,187,32"/>
+<area shape="rect" id="node4" href="$classMenu.html#a117fbfc3ae88c68edda0b4d401c4d67d" title="Menu inicial. Permite ao utilizador escolher o tipo de dataset a utilizar." alt="" coords="472,131,571,157"/>
+<area shape="rect" id="node5" href="$classMenu.html#af2479c56ab20abe25b90ad64fc092426" title="Menu principal. Permite ao utilizador escolher a operação a realizar." alt="" coords="246,80,381,107"/>
+<area shape="rect" id="node7" href="$classMenu.html#a4a0747df5cdc34f6f8dce688984d1c6b" title="Menu principal. Permite ao utilizador escolher a operação a realizar." alt="" coords="235,205,392,232"/>
+<area shape="rect" id="node8" href="$classMenu.html#afdf71c6eb4539655c2235bdc4edc302e" title="Permite ao utilizador escolher o tipo de toy&#45;graph a utilizar." alt="" coords="26,205,166,232"/>
+<area shape="rect" id="node11" href="$classManager.html#aa8988d9ef0d48aa0cfb72c83a4fa326b" title="Função que implementa o algoritmo de Christofides para encontrar um caminho aproximado num grafo." alt="" coords="440,193,603,220"/>
+</map>

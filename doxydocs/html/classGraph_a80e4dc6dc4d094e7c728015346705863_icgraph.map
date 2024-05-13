@@ -1,0 +1,24 @@
+<map id="Graph::findVertex" name="Graph::findVertex">
+<area shape="rect" id="node1" title="Função auxiliar para encontrar um vértice com um dado conteúdo." alt="" coords="1875,241,2009,268"/>
+<area shape="rect" id="node2" href="$classGraph.html#a5d6b6b10ebe49cc0191ab45151cd49e7" title="Adiciona uma aresta bidirecional a um grafo (this)." alt="" coords="1620,317,1827,344"/>
+<area shape="rect" id="node4" href="$classManager.html#aa8988d9ef0d48aa0cfb72c83a4fa326b" title="Função que implementa o algoritmo de Christofides para encontrar um caminho aproximado num grafo." alt="" coords="1153,244,1316,270"/>
+<area shape="rect" id="node12" href="$classGraph.html#a516f4487d70f4b15e413447afa8c2310" title="Adiciona uma aresta a um grafo (this), dado o conteúdo dos vértices de origem e destino e o peso da a..." alt="" coords="1661,64,1786,90"/>
+<area shape="rect" id="node14" href="$classManager.html#a515c94b4d9a919626fceb3b1658a1d8e" title="Faz parse aos vértices dos grafos do tipo Toy Graph." alt="" coords="1370,13,1566,40"/>
+<area shape="rect" id="node16" href="$classGraph.html#a59a5e666d2b7dc025704d7e6bce95c01" title="Adiciona um vértice com um dado conteúdo (v) a um grafo (this)." alt="" coords="1656,114,1791,141"/>
+<area shape="rect" id="node18" href="$classManager.html#ac6d6ef3433df5093a9e67feb13bdd3f1" title="Função que chama a função de backtracking para encontrar o caminho mais curto num grafo." alt="" coords="399,420,611,446"/>
+<area shape="rect" id="node19" href="$classManager.html#a0c79c6cde5e5dbe53a5a1d0ebb599030" title="Função que implementa o algoritmo Prim para encontrar uma MST de um grafo." alt="" coords="1627,266,1819,293"/>
+<area shape="rect" id="node20" href="$classGraph.html#a51bcd802bed8dcce5bf066cd02706124" title="Obtém a distância entre dois vértices." alt="" coords="1637,165,1810,192"/>
+<area shape="rect" id="node21" href="$classGraph.html#a764e3181643efb34ff0209ca6e33275b" title="Remove uma aresta de um grafo (this)." alt="" coords="1648,418,1799,445"/>
+<area shape="rect" id="node22" href="$classManager.html#a225e3a90affc4170ff6e7d803060de73" title="Função que implementa o algoritmo triangular approximation para encontrar um caminho aproximado num g..." alt="" coords="1159,321,1310,348"/>
+<area shape="rect" id="node3" href="$classManager.html#a5420cad739f93d82ab6e06f36c870764" title="Função que combina a MST e o MWM num grafo." alt="" coords="1364,317,1572,344"/>
+<area shape="rect" id="node11" href="$classManager.html#a5fb41399204825eb35a0b6c7b87d077c" title="Função que implementa Prim para encontrar a MST de um grafo." alt="" coords="1411,266,1525,293"/>
+<area shape="rect" id="node5" href="$classMenu.html#af2479c56ab20abe25b90ad64fc092426" title="Menu principal. Permite ao utilizador escolher a operação a realizar." alt="" coords="939,220,1073,246"/>
+<area shape="rect" id="node8" href="$classMenu.html#a4a0747df5cdc34f6f8dce688984d1c6b" title="Menu principal. Permite ao utilizador escolher a operação a realizar." alt="" coords="193,270,351,297"/>
+<area shape="rect" id="node6" href="$classMenu.html#a435b9fa4677e757df4858e3ed1ac8575" title="Permite ao utilizador escolher o tipo de extra&#45;fully&#45;connected graph a utilizar." alt="" coords="659,154,859,195"/>
+<area shape="rect" id="node10" href="$classMenu.html#a7477a8d66d749c6adb5d008c756263da" title="Permite ao utilizador escolher o tipo de real&#45;world graph a utilizar." alt="" coords="668,102,849,129"/>
+<area shape="rect" id="node7" href="$classMenu.html#a117fbfc3ae88c68edda0b4d401c4d67d" title="Menu inicial. Permite ao utilizador escolher o tipo de dataset a utilizar." alt="" coords="455,178,554,205"/>
+<area shape="rect" id="node9" href="$classMenu.html#afdf71c6eb4539655c2235bdc4edc302e" title="Permite ao utilizador escolher o tipo de toy&#45;graph a utilizar." alt="" coords="5,178,145,205"/>
+<area shape="rect" id="node13" href="$classManager.html#a9339a8a48e2bf43d2cc419b39f9c92d8" title="Faz parse às arestas dos grafos do tipo Real World." alt="" coords="908,64,1104,106"/>
+<area shape="rect" id="node15" href="$classManager.html#ae0fd1124e1177a18ecafbff73f5519c8" title="Função que encontra o MWM (Minimum Weight Matching) num grafo." alt="" coords="1394,165,1542,192"/>
+<area shape="rect" id="node17" href="$classManager.html#ad19012374d3d23a5c17c739ad1c22c74" title="Faz parse aos vértices dos grafos do tipo Real World." alt="" coords="907,130,1105,171"/>
+</map>

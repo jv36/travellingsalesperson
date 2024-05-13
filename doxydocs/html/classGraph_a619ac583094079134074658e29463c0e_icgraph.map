@@ -1,0 +1,20 @@
+<map id="Graph::getVertexSet" name="Graph::getVertexSet">
+<area shape="rect" id="node1" title="Obtém o conjunto de vértices de um grafo." alt="" coords="1732,232,1885,259"/>
+<area shape="rect" id="node2" href="$classManager.html#a31f4c0140bf8de1df556165d02063787" title="Função que implementa o backtracking para encontrar o caminho mais curto num grafo." alt="" coords="1503,29,1673,56"/>
+<area shape="rect" id="node10" href="$classManager.html#aa8988d9ef0d48aa0cfb72c83a4fa326b" title="Função que implementa o algoritmo de Christofides para encontrar um caminho aproximado num grafo." alt="" coords="1001,257,1163,284"/>
+<area shape="rect" id="node11" href="$classManager.html#a0c79c6cde5e5dbe53a5a1d0ebb599030" title="Função que implementa o algoritmo Prim para encontrar uma MST de um grafo." alt="" coords="1492,131,1684,157"/>
+<area shape="rect" id="node12" href="$classManager.html#a5fb41399204825eb35a0b6c7b87d077c" title="Função que implementa Prim para encontrar a MST de um grafo." alt="" coords="1283,131,1397,157"/>
+<area shape="rect" id="node13" href="$classManager.html#a5420cad739f93d82ab6e06f36c870764" title="Função que combina a MST e o MWM num grafo." alt="" coords="1236,181,1444,208"/>
+<area shape="rect" id="node14" href="$classManager.html#af3a33c9de2ed0ca0bb028a2f4149b97a" title="Imprime o número de vértices e arestas de um grafo." alt="" coords="1014,359,1150,385"/>
+<area shape="rect" id="node15" href="$classManager.html#ac2e935c96fc2c321b225a78ce1807a3c" title="Função que encontra o circuito euleriano num grafo." alt="" coords="1495,232,1681,259"/>
+<area shape="rect" id="node16" href="$classManager.html#ad5e8470f3c6eda3cad3abf0f6e2f4359" title="Função que encontra os vértices com grau ímpar num grafo." alt="" coords="1496,283,1680,309"/>
+<area shape="rect" id="node17" href="$classManager.html#a5430044353f0196006c164c1aaedcf54" title="Função que implementa o algoritmo Prim para encontrar uma MST de um grafo." alt="" coords="1281,435,1399,461"/>
+<area shape="rect" id="node3" href="$classManager.html#ac6d6ef3433df5093a9e67feb13bdd3f1" title="Função que chama a função de backtracking para encontrar o caminho mais curto num grafo." alt="" coords="976,144,1188,171"/>
+<area shape="rect" id="node4" href="$classMenu.html#a4a0747df5cdc34f6f8dce688984d1c6b" title="Menu principal. Permite ao utilizador escolher a operação a realizar." alt="" coords="771,257,928,284"/>
+<area shape="rect" id="node5" href="$classMenu.html#afdf71c6eb4539655c2235bdc4edc302e" title="Permite ao utilizador escolher o tipo de toy&#45;graph a utilizar." alt="" coords="583,257,723,284"/>
+<area shape="rect" id="node6" href="$classMenu.html#a117fbfc3ae88c68edda0b4d401c4d67d" title="Menu inicial. Permite ao utilizador escolher o tipo de dataset a utilizar." alt="" coords="436,257,535,284"/>
+<area shape="rect" id="node7" href="$classMenu.html#af2479c56ab20abe25b90ad64fc092426" title="Menu principal. Permite ao utilizador escolher a operação a realizar." alt="" coords="253,345,388,372"/>
+<area shape="rect" id="node8" href="$classMenu.html#a435b9fa4677e757df4858e3ed1ac8575" title="Permite ao utilizador escolher o tipo de extra&#45;fully&#45;connected graph a utilizar." alt="" coords="5,305,205,346"/>
+<area shape="rect" id="node9" href="$classMenu.html#a7477a8d66d749c6adb5d008c756263da" title="Permite ao utilizador escolher o tipo de real&#45;world graph a utilizar." alt="" coords="15,237,196,264"/>
+<area shape="rect" id="node18" href="$classManager.html#a225e3a90affc4170ff6e7d803060de73" title="Função que implementa o algoritmo triangular approximation para encontrar um caminho aproximado num g..." alt="" coords="1007,409,1157,436"/>
+</map>

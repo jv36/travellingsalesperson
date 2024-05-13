@@ -1,0 +1,8 @@
+<map id="Manager::prim" name="Manager::prim">
+<area shape="rect" id="node1" title="Função que implementa o algoritmo Prim para encontrar uma MST de um grafo." alt="" coords="5,143,123,170"/>
+<area shape="rect" id="node2" href="$classMutablePriorityQueue.html#a0878839cc1d2dba2b8ab2e589ecc6405" title=" " alt="" coords="171,5,335,47"/>
+<area shape="rect" id="node3" href="$classMutablePriorityQueue.html#a2edbb1f4a6fa3ff735700dfcebebe8d4" title=" " alt="" coords="171,71,335,112"/>
+<area shape="rect" id="node4" href="$classMutablePriorityQueue.html#a3880874d7364279ac0d6d31302b28853" title=" " alt="" coords="171,136,335,177"/>
+<area shape="rect" id="node5" href="$classGraph.html#a619ac583094079134074658e29463c0e" title="Obtém o conjunto de vértices de um grafo." alt="" coords="176,202,329,229"/>
+<area shape="rect" id="node6" href="$classMutablePriorityQueue.html#a058fc182052af82e10cc3719e448b62d" title=" " alt="" coords="171,253,335,295"/>
+</map>

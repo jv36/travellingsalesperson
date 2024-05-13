@@ -1,0 +1,5 @@
+<map id="Graph::addVertex" name="Graph::addVertex">
+<area shape="rect" id="node1" title="Adiciona um vértice com um dado conteúdo (v) a um grafo (this)." alt="" coords="5,31,140,57"/>
+<area shape="rect" id="node2" href="$classGraph.html#a80e4dc6dc4d094e7c728015346705863" title="Função auxiliar para encontrar um vértice com um dado conteúdo." alt="" coords="188,5,323,32"/>
+<area shape="rect" id="node3" href="$classVertex.html#af59c1c694521d7806284fec630ac6360" title="Obtém o código (ID) de um vértice." alt="" coords="202,56,309,83"/>
+</map>

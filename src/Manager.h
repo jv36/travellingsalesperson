@@ -24,19 +24,31 @@ public:
     void triangular(Graph& graph);
     double getDistanceCoordHaversine(Graph& graph, Vertex* a, Vertex* b);
 
-private:
-    Graph graph;
+
+    void christofides(Graph &graph);
+
+
+    Graph findMWM(Graph& graph, std::vector<Vertex*>& oddDegree);
+
+    Graph MST(Graph &graph, int startingVert);
+
+    std::vector<Vertex *> findOddDegree(Graph &mst);
+
+    Graph combineMSTMWM(Graph &mst, Graph &mwm);
+
+    std::vector<int> findEulerCircuit(Graph &graph);
+
+    std::vector<int> findHamiltonCircuit(std::vector<int> &eulerCircuit);
+
+    std::vector<Vertex *> christofidesPrim(Graph graph, int startingVert);
 
     double haversine(double lat1, double lon1, double lat2, double lon2);
-
-
 
     double convert_to_radians(double coord);
 
 
-
-    // std::set<Edge *> prim();
-
+private:
+    Graph graph;
 };
 
 

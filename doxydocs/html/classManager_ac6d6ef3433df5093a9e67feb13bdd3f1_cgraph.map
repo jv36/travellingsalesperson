@@ -1,0 +1,8 @@
+<map id="Manager::backtrackBounding" name="Manager::backtrackBounding">
+<area shape="rect" id="node1" title="Função que chama a função de backtracking para encontrar o caminho mais curto num grafo." alt="" coords="5,81,217,108"/>
+<area shape="rect" id="node2" href="$classManager.html#a31f4c0140bf8de1df556165d02063787" title="Função que implementa o backtracking para encontrar o caminho mais curto num grafo." alt="" coords="265,56,436,83"/>
+<area shape="rect" id="node6" href="$classGraph.html#a80e4dc6dc4d094e7c728015346705863" title="Função auxiliar para encontrar um vértice com um dado conteúdo." alt="" coords="283,107,418,133"/>
+<area shape="rect" id="node3" href="$classVertex.html#a9858f2aa388d2bfb49d9df8f4504b5a0" title="Obtém a lista de arestas adjacentes a um vértice." alt="" coords="503,5,618,32"/>
+<area shape="rect" id="node4" href="$classVertex.html#af59c1c694521d7806284fec630ac6360" title="Obtém o código (ID) de um vértice." alt="" coords="507,56,614,83"/>
+<area shape="rect" id="node5" href="$classGraph.html#a619ac583094079134074658e29463c0e" title="Obtém o conjunto de vértices de um grafo." alt="" coords="484,107,637,133"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Manager::createEdgesRealWorld" name="Manager::createEdgesRealWorld">
+<area shape="rect" id="node1" title="Faz parse às arestas dos grafos do tipo Real World." alt="" coords="5,5,201,47"/>
+<area shape="rect" id="node2" href="$classGraph.html#a516f4487d70f4b15e413447afa8c2310" title="Adiciona uma aresta a um grafo (this), dado o conteúdo dos vértices de origem e destino e o peso da a..." alt="" coords="249,13,375,39"/>
+<area shape="rect" id="node3" href="$classGraph.html#a80e4dc6dc4d094e7c728015346705863" title="Função auxiliar para encontrar um vértice com um dado conteúdo." alt="" coords="423,13,557,39"/>
+</map>
